@@ -66,7 +66,9 @@ var f = {
 					cur=parseInt(f.getStyle(obj,attr));
 				};
 				var speed=(json[attr]-cur)/6;
+
 				speed=speed>0 ? Math.ceil(speed) : Math.floor(speed);
+				speed=parseInt(speed);
 				if(cur!=json[attr])bStop=false;
 				if(attr=='opacity'){
 					obj.style.filter='alpha(opacity:'+(cur+speed)+')';

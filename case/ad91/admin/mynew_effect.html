@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <!--
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    -->
+    <title>友漾—后台</title>
+    <meta name="keyword" content="友漾,微博营销,网络营销,微博推广,weibo推广,微博营销,淘宝推广,微博赚钱" />
+    <meta name="description" content="友漾(ad91.com)，国内领先的微博投放平台，拥有国内最大的博主资源库，提供专业的微博营销策略及一站式微博推广投放管理服务。" />
+    <link rel="shortcut icon" href="front_img/favicon.ico"/>
+    <link rel="apple-touch-icon" href="front_img/custom_icon_precomposed.png"/>
+    <link rel="stylesheet" type="text/css" href="newstyle/public.css" />
+    <link rel="stylesheet" type="text/css" href="newstyle/style.css" />
+    <link rel="stylesheet" type="text/css" href="newstyle/datepicker.css" />
+    <!--[if !IE]><!-->
+    <link href="newstyle/animation.css" type="text/css" rel="stylesheet"/>
+    <!--<![endif]-->
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+
+    <!--日历-->
+    <script src="newjs/datepicker.js" type="text/javascript"></script>
+
+    <!--表单验证-->
+    <script type="text/javascript" src="js/Validform.js"></script>
+
+    <!--报表生成-->
+    <script type="text/javascript" src="js/highcharts/highcharts.js"></script>
+    <script type="text/javascript" src="js/highcharts/exporting.js"></script>
+    <script type="text/javascript" src="newjs/ZeroClipboard.js"></script>
+    <script type="text/javascript" src="newjs/jquery.cookie.js"></script>
+    <script type="text/javascript" src="newjs/fan.js"></script>
+    <script type="text/javascript" src="newjs/do.js"></script>
+
+    <!--
+    <script type="text/javascript" src="https://getfirebug.com/firebug-lite.js"></script>
+    -->
+
+</head>
+<body>
+    <div id="header">
+        <div class="nav">
+            <div class="c_w">
+                <a href="" class="logo"></a>
+                <h4>客户组管理平台</h4>
+                <ul class="menubox">
+                    <li class="my_yy" style="background:red;">
+                        <dl class="account_drop">
+                            <dt class="account">我的友漾<em class="ico"></em></dt>
+                            <dd class="drop_box">
+                                <div class="user_name"><strong>fan01@qq.com</strong><a href="my_logout">[退出]</a></div>
+                                <div class="user_accounts">
+                                    <p>用户类型：<strong>广告主</strong></p>
+                                    <p>帐户余额：￥<strong>246875</strong><a class="ajaxlink" href="/my_ajax_billManage/?act=ubRechargeWin">[充值]</a></p>
+                                </div>
+                                <ul class="user_operate">
+                                    <li><a href="">账号概要</a></li>
+                                    <li><a href="">推广中心</a></li>
+                                    <li><a href="">资料修改</a></li>
+                                    <li><a href="">帮助中心</a></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="sms"><a href="">消息</a><em>10</em></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<div class="container c_w fixed">
+    <?php include 'side.html'; ?>
+    <div class="main" id="main">
+        <ul class="datasheet_bar">
+            <li>
+                <span>编号：2269 / 转发 / 新浪微博 / 皮草马甲11 效果数据表</span>
+            </li>
+        </ul>
+        <div class="main_cc">
+            <ul class="tag_menu">
+                <li class="current"><a href="mynew_effect.html">推广效果</a></li>
+                <li><a href="mynew_effect_source.html">访问来源</a></li>
+                <li><a href="mynew_effect_review.html">转发评论</a></li>
+                <li><a href="mynew_effect_cover.html">覆盖分析</a></li>
+                <li><a href="mynew_effect_result.html">成效分析</a></li>
+                <li><a href="mynew_effect_spread.html">传播路径</a></li>
+            </ul>
+            <div class="filter_box">
+                <ul class="filter">
+                    <li class="row">
+                        <ul class="filter_element drop_down monospaced_drop_down">
+                            <li class="title"><a href="">推广5分钟内<em class="ico"></em></a></li>
+                            <li class="options">
+                                <a>推广10分钟内</a>
+                                <a>推广15分钟内</a>
+                                <a>推广30分钟内</a>
+                                <a>推广1小时内</a>
+                            </li>
+                        </ul>
+                        <a href="" class="export btn_ico mini_button"><i class="export_ico"></i>导出</a>
+                    </li>
+                </ul>
+            </div>
+            <table class="chart_box">
+                <tr>
+                    <td id="spread_effect" width="100%" height="240">
+                        <script type="text/javascript">
+                            $(function(){
+                                var chart;
+                                chart = new Highcharts.Chart({
+                                colors:[
+                                    '#458ae6','#e68422'
+                                ],
+                                Legend: {
+                                    enabled:false
+                                },
+                                plotOptions: {
+                                  series: {
+                                    lineWidth:1.6,
+                                    shadow: false,
+                                    states: {
+                                      hover: {
+                                        lineWidth:2
+                                      }
+                                    },
+                                    marker: {
+                                      lineColor: null,
+                                      radius: 3.5,
+                                      states: {
+                                          hover: {
+                                              fillColor: 'white',
+                                              lineWidth: 2,
+                                              radius: 5
+                                          }
+                                      }
+                                    }
+                                  }
+                                },
+                                //隐藏打印&下载按钮
+                                exporting: {
+                                    buttons: {
+                                        printButton: {
+                                            enabled: false
+                                        },
+                                        exportButton: {
+                                            enabled: false
+                                        }
+                                    }
+                                },
+                                chart: {
+                                    renderTo: 'spread_effect',
+                                    type: 'line'
+                                },
+                                title: {
+                                    text: '',
+                                    x: -20 //center
+                                },
+                                subtitle: {
+                                    text: '',
+                                    x: -20
+                                },
+                                xAxis: {
+                                    gridLineWidth:1,
+                                    tickWidth:0,    //纵显示突出到基线显示值
+                                    gridLineColor:"#eae9e9",
+                                    categories: ['5min', '10min', '15min', '20min', '25min', '30min',
+                                        '35min', '40min', '45min', '50min', '55min', '60min']
+                                },
+                                yAxis: {
+                                    gridLineColor:"#eae9e9",
+                                    gridLineDashStyle:"Dash",
+                                    lineWidth:1,
+                                    title: {
+                                        text: ''
+                                    },
+                                    plotLines: [{
+                                        value: 0,
+                                        width: 1,
+                                        color: '#808080'
+                                    }]
+                                },
+                                legend: {
+                                    enabled:false
+                                    // layout: 'vertical',
+                                    // align: 'right',
+                                    // verticalAlign: 'top',
+                                    // x: -10,
+                                    // y: 100,
+                                    // borderWidth: 0
+                                },
+                                tooltip: {
+                                    formatter: function() {
+                                            return '<b>'+ this.series.name +'</b><br/>'+
+                                            this.x +': '+ this.y +'°C';
+                                    }
+                                },
+                                series: [{
+                                    name: 'London',
+                                    data: [3, 4, 5, 8, 2, 15, 6, 16, 3, 10, 6, 4]
+                                }]
+                                });
+                            })
+                        </script>
+                    </td>
+                </tr>
+            </table>
+            <table class="chart_data">
+                <tr>
+                    <td>
+                        <div class="minor">访问量</div>
+                        <div class="chief">186,368</div>
+                    </td>
+                    <td>
+                        <div class="minor">访问均价</div>
+                        <div class="chief">0.017元</div>
+                    </td>
+                </tr>
+            </table>
+            <table class="dblist_table chart_datatable">
+                <tr class="title">
+                    <td>日期</td>
+                    <td>时间</td>
+                    <td>访问</td>
+                    <td>访问均价</td>
+                </tr>
+                <?php for($i=0;$i<20; $i++){;?>
+                <tr>
+                    <td>12-12-18</td>
+                    <td>20:00-20:05</td>
+                    <td>888</td>
+                    <td>0.017元</td>
+                </tr>
+                <?php };?>
+            </table>
+            <ul class="pagelist">
+                <li><span>记录: 1549 条</span></li>
+                <li><span>首页</span></li>
+                <li><a href="">1</a></li>
+                <li class="current"><a href="">2</a></li>
+                <li><a href="">3</a></li>
+                <li><a href="">4</a></li>
+                <li><a href="">5</a></li>
+                <li><a href="">6</a></li>
+                <li><a href="">7</a></li>
+                <li><a href="">8</a></li>
+                <li><a href="">9</a></li>
+                <li><a href="">10</a></li>
+                <li><a href="">尾页</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<?php include 'footer.html'; ?>

@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <!--
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    -->
+    <title>友漾—后台</title>
+    <meta name="keyword" content="友漾,微博营销,网络营销,微博推广,weibo推广,微博营销,淘宝推广,微博赚钱" />
+    <meta name="description" content="友漾(ad91.com)，国内领先的微博投放平台，拥有国内最大的博主资源库，提供专业的微博营销策略及一站式微博推广投放管理服务。" />
+    <link rel="shortcut icon" href="front_img/favicon.ico"/>
+    <link rel="apple-touch-icon" href="front_img/custom_icon_precomposed.png"/>
+    <link rel="stylesheet" type="text/css" href="newstyle/public.css" />
+    <link rel="stylesheet" type="text/css" href="newstyle/style.css" />
+    <link rel="stylesheet" type="text/css" href="newstyle/datepicker.css" />
+    <!--[if !IE]><!-->
+    <link href="newstyle/animation.css" type="text/css" rel="stylesheet"/>
+    <!--<![endif]-->
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+
+    <!--日历-->
+    <script src="newjs/datepicker.js" type="text/javascript"></script>
+
+    <!--表单验证-->
+    <script type="text/javascript" src="js/Validform.js"></script>
+
+    <!--报表生成-->
+    <script type="text/javascript" src="js/highcharts/highcharts.js"></script>
+    <script type="text/javascript" src="js/highcharts/exporting.js"></script>
+    <script type="text/javascript" src="newjs/ZeroClipboard.js"></script>
+    <script type="text/javascript" src="newjs/jquery.cookie.js"></script>
+    <script type="text/javascript" src="newjs/fan.js"></script>
+    <script type="text/javascript" src="newjs/do.js"></script>
+
+    <!--
+    <script type="text/javascript" src="https://getfirebug.com/firebug-lite.js"></script>
+    -->
+
+</head>
+<body>
+    <div id="header">
+        <div class="nav">
+            <div class="c_w">
+                <a href="" class="logo"></a>
+                <h4>客户组管理平台</h4>
+                <ul class="menubox">
+                    <li class="my_yy" style="background:red;">
+                        <dl class="account_drop">
+                            <dt class="account">我的友漾<em class="ico"></em></dt>
+                            <dd class="drop_box">
+                                <div class="user_name"><strong>fan01@qq.com</strong><a href="my_logout">[退出]</a></div>
+                                <div class="user_accounts">
+                                    <p>用户类型：<strong>广告主</strong></p>
+                                    <p>帐户余额：￥<strong>246875</strong><a class="ajaxlink" href="/my_ajax_billManage/?act=ubRechargeWin">[充值]</a></p>
+                                </div>
+                                <ul class="user_operate">
+                                    <li><a href="">账号概要</a></li>
+                                    <li><a href="">推广中心</a></li>
+                                    <li><a href="">资料修改</a></li>
+                                    <li><a href="">帮助中心</a></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="sms"><a href="">消息</a><em>10</em></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<div class="container c_w fixed">
+    <?php include 'side.html'; ?>
+    <div class="main">
+        <div class="tips icotip">
+            <em class="ico"></em>
+            您有 <strong>7</strong> 个新的推广任务。
+        </div>
+        <div class="user_outline">
+            <ul class="outline">
+                <li class="outline_list outline_first">
+                    帐户U币：
+                    <p class="sum"><strong>56231</strong></p> 
+                    <div class="main_top_b">
+                        <a class="button orange_an" href="">充值U币</a>
+                        <a class="button" href="">U币转现</a>
+                        <span class="extract_tips"><em></em>了解 <a href="" title="">什么是U币？</a></span>
+                    </div>
+                </li>
+                <li class="outline_list">
+                    可用收入：
+                    <p class="sum"><strong>508623.32</strong> 元</p> 
+                    <div class="main_top_b">
+                        <a class="button" href="">收入提现</a>
+                        <span class="extract_tips"><em></em>查看 <a href="" title="">提现规则 &#187;</a></span>
+                    </div>
+                </li>
+                <li class="outline_list outline_last">
+                    <p>账号：<strong>19664828022</strong> [广告主]</p>
+                    <p>邮箱：<span>fan02@qq.com</span></p>
+                    <p>号码：<span>19664828022</span><a href=""> [验证]</a></p>
+                    <p>IP：<span>183.401.122.109 / 2012-12-13 15:40</span></p>
+                </li>
+            </ul>
+            <div class="statistic">
+                <span>总收入：<strong>463</strong></span>
+                <span>已结算：<strong>2560</strong></span>
+                <span>已扣款：<strong>463</strong></span>
+                <span>已退款：<strong>463</strong></span>
+                <span>待结算：<strong>89562</strong></span>
+                <span>待确认：<strong>89562</strong></span>
+                <span>帐户积分：<strong>89562</strong></span>
+            </div>
+        </div>
+        <ul class="operating_box fixed">
+            <li>
+                <a class="button" href="">最新任务(7)</a>
+            </li>
+            <li>
+                <a class="button" href="">帐号分析</a>
+            </li>
+            <li>
+                <a class="button" href="">问题订单(184)</a>
+            </li>
+            <li>
+                <a class="button" href="">帐号设置</a>
+            </li>
+            <li>
+                <a class="button" href="">收支明细</a>
+            </li>
+        </ul>
+        <div class="summary_part fixed">
+            <dl class="summary_news article_part">
+                <dt><span class="title">新闻通知</span></dt>
+                <dd>
+                    <ul class="list">
+                        <li><em class="li_ico"></em><a class="sort" href="">[新闻]</a><a href="">友漾平台中秋国庆期间付款事宜说明</a></li>
+                        <li><em class="li_ico"></em><a class="sort" href="">[新闻]</a><a href="">浅析2010年网络营销市场:跨时空性</a></li>
+                        <li><em class="li_ico"></em><a class="sort" href="">[新闻]</a><a href="">"炒作狂"欢透支微博未来</a></li>
+                        <li><em class="li_ico"></em><a class="sort" href="">[新闻]</a><a href="">AI为您打造个性网络营销服务</a></li>
+                        <li><em class="li_ico"></em><a class="sort" href="">[新闻]</a><a href="">我只想创一个互联网的神话</a></li>
+                        <li><em class="li_ico"></em><a class="sort" href="">[新闻]</a><a href="">互联网营销:"不择手段"让你差异化</a></li>
+                        <li><em class="li_ico"></em><a class="sort" href="">[新闻]</a><a href="">我只想创一个互联网的神话</a></li>
+                        <li><em class="li_ico"></em><a class="sort" href="">[新闻]</a><a href="">互联网营销:"不择手段"让你差异化</a></li>
+                        <li><em class="li_ico"></em><a class="sort" href="">[新闻]</a><a href="">我只想创一个互联网的神话</a></li>
+                        <li><em class="li_ico"></em><a class="sort" href="">[新闻]</a><a href="">互联网营销:"不择手段"让你差异化</a></li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl class="summary_faq article_part">
+                <dt><span class="title">常见问题</span></dt>
+                <dd>
+                    <ul class="list">
+                        <li><em class="li_ico"></em><a href="">提现规则</a></li>
+                        <li><em class="li_ico"></em><a href="">如何绑定微博</a></li>
+                        <li><em class="li_ico"></em><a href="">如何申请提现</a></li>
+                        <li><em class="li_ico"></em><a href="">如何成为代理商</a></li>
+                        <li><em class="li_ico"></em><a href="">如何发布任务</a></li>
+                        <li><em class="li_ico"></em><a href="">如何执行任务</a></li>
+                        <li><em class="li_ico"></em><a href="">提现规则</a></li>
+                        <li><em class="li_ico"></em><a href="">如何绑定微博</a></li>
+                        <li><em class="li_ico"></em><a href="">提现规则</a></li>
+                        <li><em class="li_ico"></em><a href="">如何绑定微博</a></li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+
+    </div>
+</div>
+
+<?php include 'footer.html'; ?>

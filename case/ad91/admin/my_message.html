@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <!--
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    -->
+    <title>友漾—后台</title>
+    <meta name="keyword" content="友漾,微博营销,网络营销,微博推广,weibo推广,微博营销,淘宝推广,微博赚钱" />
+    <meta name="description" content="友漾(ad91.com)，国内领先的微博投放平台，拥有国内最大的博主资源库，提供专业的微博营销策略及一站式微博推广投放管理服务。" />
+    <link rel="shortcut icon" href="front_img/favicon.ico"/>
+    <link rel="apple-touch-icon" href="front_img/custom_icon_precomposed.png"/>
+    <link rel="stylesheet" type="text/css" href="newstyle/public.css" />
+    <link rel="stylesheet" type="text/css" href="newstyle/style.css" />
+    <link rel="stylesheet" type="text/css" href="newstyle/datepicker.css" />
+    <!--[if !IE]><!-->
+    <link href="newstyle/animation.css" type="text/css" rel="stylesheet"/>
+    <!--<![endif]-->
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+
+    <!--日历-->
+    <script src="newjs/datepicker.js" type="text/javascript"></script>
+
+    <!--表单验证-->
+    <script type="text/javascript" src="js/Validform.js"></script>
+
+    <!--报表生成-->
+    <script type="text/javascript" src="js/highcharts/highcharts.js"></script>
+    <script type="text/javascript" src="js/highcharts/exporting.js"></script>
+    <script type="text/javascript" src="newjs/ZeroClipboard.js"></script>
+    <script type="text/javascript" src="newjs/jquery.cookie.js"></script>
+    <script type="text/javascript" src="newjs/fan.js"></script>
+    <script type="text/javascript" src="newjs/do.js"></script>
+
+    <!--
+    <script type="text/javascript" src="https://getfirebug.com/firebug-lite.js"></script>
+    -->
+
+</head>
+<body>
+    <div id="header">
+        <div class="nav">
+            <div class="c_w">
+                <a href="" class="logo"></a>
+                <h4>客户组管理平台</h4>
+                <ul class="menubox">
+                    <li class="my_yy" style="background:red;">
+                        <dl class="account_drop">
+                            <dt class="account">我的友漾<em class="ico"></em></dt>
+                            <dd class="drop_box">
+                                <div class="user_name"><strong>fan01@qq.com</strong><a href="my_logout">[退出]</a></div>
+                                <div class="user_accounts">
+                                    <p>用户类型：<strong>广告主</strong></p>
+                                    <p>帐户余额：￥<strong>246875</strong><a class="ajaxlink" href="/my_ajax_billManage/?act=ubRechargeWin">[充值]</a></p>
+                                </div>
+                                <ul class="user_operate">
+                                    <li><a href="">账号概要</a></li>
+                                    <li><a href="">推广中心</a></li>
+                                    <li><a href="">资料修改</a></li>
+                                    <li><a href="">帮助中心</a></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="sms"><a href="">消息</a><em>10</em></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<div class="container c_w fixed">
+    <?php include 'side.html'; ?>
+    <div class="main" id="main">
+        <ul class="operating_box fixed">
+            <li><a class="btn_ico button green_an" href=""><i class="chat_ico"></i>发送手机短信</a></li>
+            <li><a class="btn_ico button gray_an" href=""><i class="message_ico"></i>发送站内短信</a></li>
+        </ul>
+        <div class="tips icotip">
+            <em class="ico"></em>
+            您有 <strong>1312</strong> 条未读消息
+        </div>
+        <ul class="tag_menu">
+            <li class="current"><a href="">收件箱<strong>（1312）</strong></a></li>
+        </ul>
+        <div class="filter_box">
+            <ul class="filter">
+                <li class="row">
+                    <ul class="filtered_check">
+                        <li><input type="checkbox" name="" id="notice" /><label for="notice">系统通知</label></li>
+                        <li><input type="checkbox" name="" id="activity" /><label for="activity">站内活动</label></li>
+                        <li class="line"></li>
+                    </ul>
+                    <input type="text" class="filter_element filter_input_txt" value="" title="关键字" size="15" lang="zh-CN" x-webkit-speech x-webkit-grammar="builtin:search"/>
+                    <a href="" class="filter_element btn_ico mini_button blue_an"><i class="zoom_ico"></i>查找</a>
+                    <a href="" class="export btn_ico mini_button"><i class="export_ico"></i>导出</a>
+                </li>
+            </ul>
+            <ul class="db_listtitle message_title">
+                <li class="row">
+                    <ul class="drop_down">
+                        <li class="title"><a href="">选择<em class="ico"></em></a></li>
+                        <li class="options">
+                            <a href="javascript://" onclick="table.checkAll()">全选</a>
+                            <a href="javascript://" onclick="table.checkNO()">不选</a>
+                            <a href="javascript://" onclick="table.checkOpp()">反选</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="row"><span class="title_name">标题</span></li>
+                <li class="row">
+                    <ul class="drop_down f_right">
+                        <li class="title"><a href="">操作<em class="ico"></em></a></li>
+                        <li class="options">
+                            <a href="">编辑计划</a>
+                            <a href="">审核创意</a>
+                            <a href="">查看计划</a>
+                            <a href="">取消计划</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="main_cc"> 
+            <table class="dblist_table contextmenu msg_context">
+                <?php for($l=0;$l<10;$l++){;?>
+                <tr>
+                    <td>
+                        <ul>
+                            <li><input type="checkbox" class="checkbox_id">&nbsp;系统通知</li>
+                            <li>2012-02-15 19:00</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>[未读]双12广告主充值满5000赠送免费创意策划两次</li>
+                            <li>2012-02-05 18:00</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <div class="direct_drop_down f_right">
+                            <a class="direct" onclick="ui.message_view($(this))">查看信息</a>
+                            <ul class="drop_down">
+                                <li class="title"><a href=""><em class="ico"></em></a></li>
+                                <li class="options">
+                                    <a href="">删除</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <?php };?>
+            </table>
+            <ul class="pagelist">
+                <li><span>记录: 1549 条</span></li>
+                <li><span>首页</span></li>
+                <li><a href="">1</a></li>
+                <li class="current"><a href="">2</a></li>
+                <li><a href="">3</a></li>
+                <li><a href="">4</a></li>
+                <li><a href="">5</a></li>
+                <li><a href="">6</a></li>
+                <li><a href="">7</a></li>
+                <li><a href="">8</a></li>
+                <li><a href="">9</a></li>
+                <li><a href="">10</a></li>
+                <li><a href="">尾页</a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<?php include 'footer.html'; ?>

@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <!--
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    -->
+    <title>友漾—后台</title>
+    <meta name="keyword" content="友漾,微博营销,网络营销,微博推广,weibo推广,微博营销,淘宝推广,微博赚钱" />
+    <meta name="description" content="友漾(ad91.com)，国内领先的微博投放平台，拥有国内最大的博主资源库，提供专业的微博营销策略及一站式微博推广投放管理服务。" />
+    <link rel="shortcut icon" href="front_img/favicon.ico"/>
+    <link rel="apple-touch-icon" href="front_img/custom_icon_precomposed.png"/>
+    <link rel="stylesheet" type="text/css" href="newstyle/public.css" />
+    <link rel="stylesheet" type="text/css" href="newstyle/style.css" />
+    <link rel="stylesheet" type="text/css" href="newstyle/datepicker.css" />
+    <!--[if !IE]><!-->
+    <link href="newstyle/animation.css" type="text/css" rel="stylesheet"/>
+    <!--<![endif]-->
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+
+    <!--日历-->
+    <script src="newjs/datepicker.js" type="text/javascript"></script>
+
+    <!--表单验证-->
+    <script type="text/javascript" src="js/Validform.js"></script>
+
+    <!--报表生成-->
+    <script type="text/javascript" src="js/highcharts/highcharts.js"></script>
+    <script type="text/javascript" src="js/highcharts/exporting.js"></script>
+    <script type="text/javascript" src="newjs/ZeroClipboard.js"></script>
+    <script type="text/javascript" src="newjs/jquery.cookie.js"></script>
+    <script type="text/javascript" src="newjs/fan.js"></script>
+    <script type="text/javascript" src="newjs/do.js"></script>
+
+    <!--
+    <script type="text/javascript" src="https://getfirebug.com/firebug-lite.js"></script>
+    -->
+
+</head>
+<body>
+    <div id="header">
+        <div class="nav">
+            <div class="c_w">
+                <a href="" class="logo"></a>
+                <h4>客户组管理平台</h4>
+                <ul class="menubox">
+                    <li class="my_yy" style="background:red;">
+                        <dl class="account_drop">
+                            <dt class="account">我的友漾<em class="ico"></em></dt>
+                            <dd class="drop_box">
+                                <div class="user_name"><strong>fan01@qq.com</strong><a href="my_logout">[退出]</a></div>
+                                <div class="user_accounts">
+                                    <p>用户类型：<strong>广告主</strong></p>
+                                    <p>帐户余额：￥<strong>246875</strong><a class="ajaxlink" href="/my_ajax_billManage/?act=ubRechargeWin">[充值]</a></p>
+                                </div>
+                                <ul class="user_operate">
+                                    <li><a href="">账号概要</a></li>
+                                    <li><a href="">推广中心</a></li>
+                                    <li><a href="">资料修改</a></li>
+                                    <li><a href="">帮助中心</a></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="sms"><a href="">消息</a><em>10</em></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container c_w fixed">
+        <div class="sidebar">
+            <ul class="sidebar_menu">
+                <li><a class="first_menu" href=""><em class="s_menu_ico s_home_ico"></em>账户概况<em class="arrow"></em></a></li>
+                <li><a class="first_menu" href=""><em class="s_menu_ico s_user_ico"></em>账号管理<em class="arrow"></em></a></li>
+                <li><a class="first_menu" href=""><em class="s_menu_ico s_weibo_ico"></em>微博管理<em class="arrow"></em></a></li>
+                <li><a class="first_menu" href=""><em class="s_menu_ico s_spread_ico"></em>推广管理<em class="arrow"></em></a></li>
+                <li class="current"><a class="first_menu" href=""><em class="s_menu_ico s_plan_ico"></em>推广计划<em class="number">12</em><em class="arrow"></em></a></li>
+                <li><a class="first_menu" href=""><em class="s_menu_ico s_article_ico"></em>文章管理<em class="arrow"></em></a></li>
+                <li><a class="first_menu" href=""><em class="s_menu_ico s_ledweibo_ico"></em>带号管理<em class="arrow"></em></a></li>
+                <li><a class="first_menu" href=""><em class="s_menu_ico s_money_ico"></em>财务管理<em class="arrow"></em></a></li>
+                <li><a class="first_menu" href=""><em class="s_menu_ico s_site_ico"></em>系统设定<em class="arrow"></em></a></li>
+                <li><a class="first_menu" href=""><em class="s_menu_ico s_gift_ico"></em>积分商城<em class="arrow"></em></a></li>
+                <li><a class="first_menu" href=""><em class="s_menu_ico s_task_ico"></em>任务管理<em class="arrow"></em></a></li>
+                <li><a class="first_menu" href=""><em class="s_menu_ico s_order_ico"></em>我的订单<em class="arrow"></em></a></li>
+                <li><a class="first_menu" href=""><em class="s_menu_ico s_effect_ico"></em>效果统计<em class="arrow"></em></a></li>
+            </ul>
+        </div>
+        <div class="main" id="main">
+            <div class="main_cc">
+                <ul class="article_list">
+                    <li class="fixed">
+                        <label for="" class="input_label">计划名称：</label>
+                        <span class="options_label">转发 / 双十一内衣大促推广计划<em class="ico sina_ico"></em></span>
+                    </li>
+                    <li class="fixed">
+                        <label for="" class="input_label">客户名称：</label>
+                        <span class="options_label">要记住我的店</span>
+                    </li>
+                    <li class="fixed">
+                        <label for="" class="input_label">推广时间：</label>
+                        <span class="options_label">2012-0207 20:25</span>
+                    </li>
+                    <li class="fixed">
+                        <label for="" class="input_label">推广链接：</label>
+                        <span class="options_label"><a href="#">http://www.ad91.com</a></span>
+                    </li>
+                    <li class="fixed">
+                        <label for="" class="input_label">粉丝人群：</label>
+                        <span class="options_label">北京、上海、广州、深圳</span>
+                    </li>
+                </ul>
+                <div class="view_iderbox">
+                    <table>
+                        <tr>
+                            <td class="title">创意图片：</td>
+                            <td><a href="">../upload/rec_images/1352431413.jpg</a></td>
+                        </tr>
+                        <tr>
+                            <td class="title">创意内容：</td>
+                            <td>今年大肆盛行的复古麻花毛衣，最适合简单你的啦~！粗毛线面料，手感舒适很亲肤哟~~[太开心]冷一些的话，外搭小外套，冬天搭配呢大衣or羽绒服都可以的[亲亲]【麻花毛衣】>>> <a href="#">http://t.cn/zjva505</a></td>
+                        </tr>
+                        <tr>
+                            <td class="title">转发语：</td>
+                            <td>今年大肆盛行的复古麻花毛衣[太开心]有没有让你想到儿时的自己呢！【麻花毛衣】<a href="">http://t.cn/zjva505</a></td>
+                        </tr>
+                        <tr>
+                            <td class="title">要求：</td>
+                            <td>请博主直接发布，不要使用定时器。谢谢~</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <ul class="tag_menu">
+                <li class="current"><a href="">本次活动共有 <stron>20</stron> 个微博参与执行</a></li>
+            </ul>
+            <div class="filter_box">
+                <ul class="filter row_last">
+                    <li class="row">
+                        <input type="text" class="filter_element filter_input_txt" value="" title="关键字" size="30" />
+                        <a href="" class="filter_element btn_ico mini_button blue_an"><i class="zoom_ico"></i>查找</a>
+                        <a href="" class="export btn_ico mini_button"><i class="export_ico"></i>导出</a>
+                    </li> 
+                </ul>
+                <ul class="db_listtitle">
+                    <li class="row">
+                        <ul class="drop_down">
+                            <li class="title"><a href="">队列<em class="ico"></em></a></li>
+                            <li class="options">
+                                <a href="javascript://" onclick="table.checkAll()">全选</a>
+                                <a href="javascript://" onclick="table.checkNO()">不选</a>
+                                <a href="javascript://" onclick="table.checkOpp()">反选</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="row"><span class="title_name">粉丝覆盖量</span></li>
+                    <li class="row"><span class="title_name">链接地址</span></li>
+                    <li class="row">
+                        <div class="direct_drop_down">
+                            <a class="direct">审核已选</a>
+                            <ul class="drop_down">
+                                <li class="title"><a href=""><em class="ico"></em></a></li>
+                                <li class="options">
+                                    <a href="">发短信给已选博主</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <table class="dblist_table">
+                
+                <?php for($i=0;$i<20;$i++){;?>
+                <tr class="list" listid="<?php echo $i;?>">
+                    <td>
+                        <ul>
+                            <li><input type="checkbox" class="checkbox_id" value="0"> <a href="">冷笑话</a><em class="ico sina_ico"></em></li>
+                            <li>博主帐号：728929095@qq.com</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>708624 男80% 女20%</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li><a href="" target="_blank">http://weibo.com/1784830527/z9xhtbsJa</a></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <div class="direct_drop_down">
+                            <a class="direct" href="javascript://" onclick="ui.add_pop('审核微博主推广返链', '480','' , 'ajax_checkWeiboAct.html','')">审核返链</a>
+                            <ul class="drop_down">
+                                <li class="title"><a href=""><em class="ico"></em></a></li>
+                                <li class="options">
+                                    <a href="">发短信给该博主</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <?php };?>
+            </table>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="c_w fixed">
+            <div class="menu_copyright">
+                <ul>
+                    <li><a href="/my_server">服务条款</a><span>|</span></li>
+                    <li><a href="javascript://" onclick="ui.pop_feedback_show();">反馈建议</a><span>|</span></li>
+                    <li><a href="/my_contactUs">联系我们</a><span>|</span></li>
+                    <li><a href="/my_joinUs">加入我们</a><span>|</span></li>
+                    <li><a href="/my_agency_login">代理登录</a><span>|</span></li>
+                    <li><a href="/my_agency_login">网站统计</a></li>
+                </ul>
+                &#169; 2010-2012 ad91.com Inc. All Rights Reserved  <a href="http://www.miibeian.gov.cn" target="_blank">粤ICP7843243号</a>
+            </div>
+            <div class="tel">
+                服务热线：<strong>400-076-9991</strong>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

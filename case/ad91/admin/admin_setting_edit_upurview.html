@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <!--
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    -->
+    <title>友漾—后台</title>
+    <meta name="keyword" content="友漾,微博营销,网络营销,微博推广,weibo推广,微博营销,淘宝推广,微博赚钱" />
+    <meta name="description" content="友漾(ad91.com)，国内领先的微博投放平台，拥有国内最大的博主资源库，提供专业的微博营销策略及一站式微博推广投放管理服务。" />
+    <link rel="shortcut icon" href="front_img/favicon.ico"/>
+    <link rel="apple-touch-icon" href="front_img/custom_icon_precomposed.png"/>
+    <link rel="stylesheet" type="text/css" href="newstyle/public.css" />
+    <link rel="stylesheet" type="text/css" href="newstyle/style.css" />
+    <link rel="stylesheet" type="text/css" href="newstyle/datepicker.css" />
+    <!--[if !IE]><!-->
+    <link href="newstyle/animation.css" type="text/css" rel="stylesheet"/>
+    <!--<![endif]-->
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+
+    <!--日历-->
+    <script src="newjs/datepicker.js" type="text/javascript"></script>
+
+    <!--表单验证-->
+    <script type="text/javascript" src="js/Validform.js"></script>
+
+    <!--报表生成-->
+    <script type="text/javascript" src="js/highcharts/highcharts.js"></script>
+    <script type="text/javascript" src="js/highcharts/exporting.js"></script>
+    <script type="text/javascript" src="newjs/ZeroClipboard.js"></script>
+    <script type="text/javascript" src="newjs/jquery.cookie.js"></script>
+    <script type="text/javascript" src="newjs/fan.js"></script>
+    <script type="text/javascript" src="newjs/do.js"></script>
+
+    <!--
+    <script type="text/javascript" src="https://getfirebug.com/firebug-lite.js"></script>
+    -->
+
+</head>
+<body>
+    <div id="header">
+        <div class="nav">
+            <div class="c_w">
+                <a href="" class="logo"></a>
+                <h4>客户组管理平台</h4>
+                <ul class="menubox">
+                    <li class="my_yy" style="background:red;">
+                        <dl class="account_drop">
+                            <dt class="account">我的友漾<em class="ico"></em></dt>
+                            <dd class="drop_box">
+                                <div class="user_name"><strong>fan01@qq.com</strong><a href="my_logout">[退出]</a></div>
+                                <div class="user_accounts">
+                                    <p>用户类型：<strong>广告主</strong></p>
+                                    <p>帐户余额：￥<strong>246875</strong><a class="ajaxlink" href="/my_ajax_billManage/?act=ubRechargeWin">[充值]</a></p>
+                                </div>
+                                <ul class="user_operate">
+                                    <li><a href="">账号概要</a></li>
+                                    <li><a href="">推广中心</a></li>
+                                    <li><a href="">资料修改</a></li>
+                                    <li><a href="">帮助中心</a></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="sms"><a href="">消息</a><em>10</em></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<div class="container c_w fixed">
+    <?php include 'side.html'; ?>
+    <div class="main" id="main">
+        <ul class="operating_box fixed">
+            <li><a class="btn_ico button green_an" target="_blank" href="admin_setting_edit_upurview.html"><i class="add_ico"></i>添加管理员</a></li>
+            <li><a class="btn_ico button" href="javascript://" onclick="ui.add_pop('编辑管理组', '520','' , 'ajax_edit_group.html','')"><i class="pen_ico"></i>编辑管理组</a></li>
+        </ul>
+        <ul class="article_from">
+            <li class="fixed">
+                <label class="input_label" for="">管理帐号：</label>
+                <input class="input_txt" type="text" name="" id="">
+                <span class="Validform_checktip">即后台登录帐号</span>
+            </li>
+            <li class="fixed">
+                <label class="input_label" for="">用户昵称：</label>
+                <input class="input_txt" type="text" name="" id="">
+                <span class="Validform_checktip">工作人员姓名</span>
+            </li>
+            <li class="fixed">
+                <label class="input_label" for="">登录密码：</label>
+                <input class="input_txt" type="text" name="" id="">
+                <span class="Validform_checktip"></span>
+            </li>
+            <li class="fixed">
+                <label class="input_label" for="">用户组别：</label>
+                <select class="select_a" name="" id="">
+                    <option value="">用户组别</option>
+                    <option value="">品牌组</option>
+                    <option value="">创意组</option>
+                    <option value="">客户组</option>
+                    <option value="">媒介组</option>
+                    <option value="">客服组</option>
+                    <option value="">账务组</option>
+                    <option value="">系统管理组</option>
+                </select>
+                <span class="Validform_checktip"></span>
+            </li>
+        </ul>
+        <ul class="article_from">
+            <li class="fixed">
+                <label class="input_label" for="">操作权限：</label>
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label"><strong>用户帐号管理</strong></label>
+            </li>
+            <li class="fixed">
+                <label class="input_label" for="">&nbsp;</label>
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">博主可查看广告主与代理商</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">审核用户</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">编辑用户</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">密码</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">打折</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">信用额度</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">调用收藏</label>
+            </li>
+            <li class="fixed">
+                <label class="input_label" for="">&nbsp;</label>
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">设为待审核</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">指派助理</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">登录她</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">冻结用户</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">导出用户</label>
+            </li>
+        </ul>
+        <ul class="article_from">
+            <li class="fixed">
+                <label class="input_label" for="">&nbsp;</label>
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label"><strong>审核微博</strong></label>
+            </li>
+            <li class="fixed">
+                <label class="input_label" for="">&nbsp;</label>
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">取消审核</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">编辑微博</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">冻结微博</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">推荐微博</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">更新微博</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">导出微博</label>
+            </li>
+        </ul>
+        <ul class="article_from">
+            <li class="fixed">
+                <label class="input_label" for="">&nbsp;</label>
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label"><strong>推广管理</strong></label>
+            </li>
+            <li class="fixed">
+                <label class="input_label" for="">&nbsp;</label>
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">查看预算</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">查看成本</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">查看实际消费</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">审核推广</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">编辑推广</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">审核返链</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">设为完成</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">发短信</label>
+            </li>
+            <li class="fixed">
+                <label class="input_label" for="">&nbsp;</label>
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">生成效果</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">重新生成财务</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">获取返链转发数</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">导出推广</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">推广主管</label>
+            </li>
+        </ul>
+        <ul class="article_from">
+            <li class="fixed">
+                <label class="input_label" for="">&nbsp;</label>
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label"><strong>文章管理</strong></label>
+            </li>
+        </ul>
+        <ul class="article_from">
+            <li class="fixed">
+                <label class="input_label" for="">&nbsp;</label>
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label"><strong>带号管理</strong></label>
+            </li>
+        </ul>
+        <ul class="article_from">
+            <li class="fixed">
+                <label class="input_label" for="">&nbsp;</label>
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label"><strong>财务管理</strong></label>
+            </li>
+            <li class="fixed">
+                <label class="input_label" for="">&nbsp;</label>
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">查看财务汇总</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">充值</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">设为已提现</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">取消已提现</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">备注财务</label>
+            </li>
+        </ul>
+        <ul class="article_from">
+            <li class="fixed">
+                <label class="input_label" for="">&nbsp;</label>
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label"><strong>系统设置</strong></label>
+            </li>
+            <li class="fixed">
+                <label class="input_label" for="">&nbsp;</label>
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">接口设定</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">系统用户权限</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">系统日志</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">合作伙伴</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">短链接管理</label>
+
+                <input class="checkbox_a" name="purview[]" id="purview_0" type="checkbox" value="x01">
+                <label for="purview_0" class="options_label">链接分析</label>
+            </li>
+        </ul>
+        <ul class="article_from_submit">
+            <li class="fixed">
+                <label for="" class="input_label">&nbsp;</label>
+                <button class="button blue_an">确认提交</button>
+            </li>
+        </ul>   
+    </div>
+</div>
+<?php include 'footer.html'; ?>

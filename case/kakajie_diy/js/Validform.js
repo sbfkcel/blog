@@ -18,8 +18,8 @@
 		callback:function(data){
 			//返回数据data是json格式，{"info":"demo info","status":"y"}
 			//info: 输出提示信息;
-			//status: 返回提交数据的状态,是否提交成功。如可以用"y"表示提交成功，"n"表示提交失败，在ajax_post.php文件返回数据里自定字符，主要用在callback函数里根据该值执行相应的回调操作;
-			//你也可以在ajax_post.php文件返回更多信息在这里获取，进行相应操作；
+			//status: 返回提交数据的状态,是否提交成功。如可以用"y"表示提交成功，"n"表示提交失败，在ajax_post.html文件返回数据里自定字符，主要用在callback函数里根据该值执行相应的回调操作;
+			//你也可以在ajax_post.html文件返回更多信息在这里获取，进行相应操作；
 			
 			//这里执行回调操作;
 			//注意：如果不是ajax方式提交表单，传入callback表单将不会提交。在验证全部通过后会执行这个回调函数，这种情况data参数不可用。

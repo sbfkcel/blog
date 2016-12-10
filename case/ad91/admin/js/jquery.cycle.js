@@ -4,7 +4,7 @@
  * Copyright (c) 2007-2008 M. Alsup
  * Version: 2.22 (06/08/2008)
  * Dual licensed under the MIT and GPL licenses:
- * http://www.opensource.org/licenses/mit-license.php
+ * http://www.opensource.org/licenses/mit-license.html
  * http://www.gnu.org/licenses/gpl.html
  * Requires: jQuery v1.1.3.1 or later
  *
@@ -412,7 +412,7 @@ $.fn.cycle.defaults = {
  * Copyright (c) 2007-2008 M. Alsup
  * Version:  2.22
  * Dual licensed under the MIT and GPL licenses:
- * http://www.opensource.org/licenses/mit-license.php
+ * http://www.opensource.org/licenses/mit-license.html
  * http://www.gnu.org/licenses/gpl.html
  */
 (function($) {
