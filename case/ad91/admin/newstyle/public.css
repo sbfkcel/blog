@@ -1,0 +1,34 @@
+@charset "utf-8";
+/*
+Theme Name: 友漾
+Theme URI: http://www.ad91.com
+Description:友漾
+Version:1.0 Beta
+Author&Design:单炒饭
+Author-mail:china1099@qq.com
+Author URI: http://www.ad91.com
+*/
+
+/* #################### 主控制 ##################### */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,hr,fieldset,input,textarea,select,label,p,blockquote,th,td {margin:0px auto; padding:0px; font-family:Tahoma,Helvetica,arial,微软雅黑,Microsoft YaHei,宋体;}
+table {border-collapse:collapse;border-spacing:0;}
+fieldset,img {border:none;}
+address,caption,cite,code,dfn,th,var {font-style:normal;font-weight:normal;}
+ol,ul {list-style:none;}
+caption,th {text-align:left;}
+img a {border: none;}
+.cl {clear:both; height:1px; overflow:hidden; margin-top:-1px;}
+.fixed:after{content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+.fixed{zoom:1;}
+
+*html{background-image:url(about:blank);background-attachment:fixed;}
+
+::-moz-selection{background:#02c5c7; color:#fff;}
+::selection {background:#02c5c7; color:#fff;}
+
+/*公共样式*/
+html {background:white;}
+a {color:#4a74b5; text-decoration:none;}
+a:hover,a.hover {text-decoration:underline;} /*a.hover是为了解决ZeroClipboard复制flash遮挡hover事件失效*/
+h1,h2,h3,h4,h5,h6 {font-family:微软雅黑,Microsoft YaHei;}
+body {font-size:12px;}

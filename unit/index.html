@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>移动端设计单位参考指引——by 4399 GDC feTeam</title>
+	<meta content='True' name='HandheldFriendly' />
+	<meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
+	<!--忽略页面中的电话号码数字和邮件链接-->
+	<meta name="format-detection" content="telephone=no,email=no" />
+	<!--是否启动webapp功能，会删除默认的苹果工具栏和菜单栏-->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<!--当启动webapp功能时，显示手机信号、时间、电池的顶部导航栏的颜色。默认值为default（白色），可以定为black（黑色）和black-translucent（灰色半透明）-->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<!-- Standard iPhone -->
+	<link rel="apple-touch-icon" sizes="57x57" href="./touch-icon-iphone-114.png" />
+	<!-- Standard iPad -->
+	<link rel="apple-touch-icon" sizes="72x72" href="./touch-icon-ipad-144.png" />
+	<!-- Retina iPhone -->
+	<link rel="apple-touch-icon" sizes="114x114" href="./touch-icon-iphone-114.png" />
+	<!-- Retina iPad -->
+	<link rel="apple-touch-icon" sizes="144x144" href="./touch-icon-ipad-144.png" />
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<script type="text/html" id="tpl">
+		{{if !isMobile}}
+			<img id="pageImgCode" class="imgCode" src="imgCode.png" title="使用移动设备扫描二维码访问该页面！">
+		{{/if}}
+		{{if density}}
+			<style type="text/css">
+				{{each fontSize as value i}}
+					.formDemo__textSize{{value}} {font-size:{{value}}px;}
+				{{/each}}
+			</style>
+			<h1>移动端设计单位参考指引</h1>
+			<div class="tipBlock">当前设备的屏幕密度为<strong>{{density}}</strong>，即<strong>1dp = {{1 * density}}px</strong></div>
+			<dl>
+				<dt>触摸区域：</dt>
+				<dd>
+					<div class="touchSize">
+						<div class="touchSize__block">
+							48dp
+						</div>
+						<div class="touchSize__explain">
+							触摸区域建议不小于 <strong>{{48 * density}}</strong>px
+						</div>
+					</div>
+				</dd>
+			</dl>
+			<dl>
+				<dt>设备信息：</dt>
+				<dd>
+					<table>
+						<thead>
+							<tr>
+								<th>设备宽</th>
+								<th>设备高</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>{{deviceW}}pt</td>
+								<td>{{deviceH}}pt</td>
+							</tr>
+						</tbody>
+					</table>
+				</dd>
+			</dl>
+			<dl>
+				<dt>字体大小参考对照：</dt>
+				<dd>
+					<ul class="fontDemo">
+						{{each fontSize as value i}}
+							<li class="fontDemo__list">
+								<span class="formDemo__signs">{{value}}dp/{{value * density}}px</span>
+								<div class="formDemo__text formDemo__textSize{{value}}">
+									四三九九游戏<br>
+									0123456789,.<br>
+									abcdefghijklm...<br>
+									ABCDEFGHIJK...
+								</div>
+								<div class="formDemo__text formDemo__textSize{{value}} formDemo__text--bold">
+									四三九九游戏<br>
+									0123456789,.<br>
+									abcdefghijklm...<br>
+									ABCDEFGHIJK...
+								</div>
+							</li>
+						{{/each}}
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dt>其它设备参考表：</dt>
+				<dd>
+					{{each otherDevice as value i}}
+						<table class="otherDevice">
+							<tbody>
+								<tr>
+									<td class="otherDevice__title">设备名称：</td>
+									<td>{{otherDevice[i].name}}</td>
+								</tr>
+								<tr>
+									<td class="otherDevice__title">屏幕尺寸：</td>
+									<td>{{otherDevice[i].inch}}吋</td>
+								</tr>
+								<tr>
+									<td class="otherDevice__title">分辩率（PT）：</td>
+									<td>{{otherDevice[i].pt}}</td>
+								</tr>
+								<tr>
+									<td class="otherDevice__title">Reader：</td>
+									<td>{{otherDevice[i].reader}}</td>
+								</tr>
+								<tr>
+									<td class="otherDevice__title">分辩率(px)：</td>
+									<td>{{otherDevice[i].px}}</td>
+								</tr>
+								<tr>
+									<td class="otherDevice__title">渲染分辩率(px)：</td>
+									<td>{{otherDevice[i].render}}</td>
+								</tr>
+								<tr>
+									<td class="otherDevice__title">PPT：</td>
+									<td>{{otherDevice[i].ppi}}</td>
+								</tr>
+							</tbody>
+						</table>
+					{{/each}}
+				</dd>
+			</dl>
+		{{/if}}
+	</script>
+	<script src="./js/template.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+</html>

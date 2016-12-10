@@ -1,0 +1,26 @@
+@charset "utf-8";
+/*  
+* Theme Name: koala
+* Theme URI: http://koala-app.com
+* Description:koala，开源前端预处理器语言编译工具
+* Version: 1.0 Beta
+* Author: 单炒饭
+* Author URI: http://weibo.com/1836245302
+*/
+/* #################### 主控制 ##################### */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,hr,fieldset,input,textarea,select,label,p,blockquote,th,td {margin:0px auto; padding:0px; font-family:Tahoma,\5fae\8f6f\96c5\9ed1,Helvetica,arial;}
+table {border-collapse:collapse;border-spacing:0;}
+fieldset,img {border:none;}
+address,caption,cite,code,dfn,th,var {font-style:normal;font-weight:normal;}
+ol,ul {list-style:none;}
+caption,th {text-align:left;}
+img a {border:none;}
+.cl {clear:both; height:1px; overflow:hidden; margin-top:-1px;}
+.fixed:after {content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+.fixed {zoom:1;}
+
+// *html{background-image:url(about:blank);background-attachment:fixed;}
+
+/*公共样式*/
+a {text-decoration:none;}
+// a:hover {text-decoration:underline;}

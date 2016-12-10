@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>测试多对多关系</title>
+	<style type="text/css">
+	html,body {
+		width:100%; height:100%;
+	}
+	* {font-family:Tahoma,\5fae\8f6f\96c5\9ed1,Helvetica,arial; padding:0; margin:0;}
+	
+	.nRelated {font-size:16px; height:32px; line-height:32px; padding:5px 0;}
+	.nRelated__txt {float:left;}
+	.nRelated__button {float:right;}
+	.nRelated__button button {height:32px; line-height:32px; font-size:14px; padding:0 10px;}
+	button {cursor:pointer;}
+	.button--disabled {opacity:0.5; cursor:default;}
+
+	.main {margin:0 10px;}
+	table {font-size:12px; border-collapse:collapse; border-spacing:0;}
+	tbody {padding:10px;}
+	td {width:80px; height:20px; line-height:20px; border:1px #ccc solid; padding:5px 10px;}
+	.id {width:20px;}
+	tr {}
+	tr:nth-of-type(odd) {background:#f8f8f8;}
+	tr:nth-of-type(even) {background:#fffff;}
+	tr:hover {background-color:#000000; color:white;}
+
+	.tip {position:absolute; left:0; top:0; right:0; bottom:0; height:100%; line-height:100%; font-size:14px; line-height:24px; z-index:9; background:black; color:white; text-align:center;}
+	.tip__content {width:400px; height:80px; position:absolute; left:50%; top:40%; margin-left:-200px; margin-top:-40px;}
+	</style>
+</head>
+<body>
+	<div class="tip" id="tip">
+		<div class="tip__content">
+			建议使用Microsoft Edge浏览器打开<br>
+			分析过程较长，请耐心等待<br>
+			……
+		</div>
+	</div>
+	<div class="main">
+		<h1 class="nRelated">
+			<div class="nRelated__txt" id="nRelated__txt"></div>
+			<div class="nRelated__button">
+				<span class="nRelated__pageState" id="nRelated__pageState"></span>
+				<button id="prev">上一页</button>
+				<button id="next">下一页</button>
+			</div>
+		</h1>
+		<table id="dataTable">
+			<tbody id="oDataTbody">
+				
+			</tbody>
+		</table>
+	</div>
+	
+
+	<script src="http://pic.my4399.com/re/cms/feUtil/seajs/3.0.0/sea.js"></script>
+	<script src="./js/config.js"></script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>卡卡街微博DIY演示</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+<meta name="keyword" content="演示" />
+<meta name="description" content="演示" />
+<link rel="shortcut icon" href="img/favicon.ico"/>
+<!--apple-touch-icon-precomposed-->
+<link rel="apple-touch-icon" href="img/custom_icon_precomposed.png"/>
+<link href="style/public.css" type="text/css" rel="stylesheet" />
+<link href="style/style.css" type="text/css" rel="stylesheet" />
+<!--[if gt IE 9.0]>
+<link href="style/home_animation.css" type="text/css" rel="stylesheet" />
+<![endif]-->
+<!--[if !IE]><!-->
+<link href="style/home_animation.css" type="text/css" rel="stylesheet" />
+<!--<![endif]-->
+<script src="js/jquery-min.js" type="text/javascript"></script>
+<script src="js/jquery.cookie.js" type="text/javascript"></script>
+<script src="js/fan.js" type="text/javascript"></script>
+<script src="js/jquery.cycle.js" type="text/javascript"></script>
+<script src="js/address.js" type="text/javascript"></script>
+<script src="js/animation.js"></script>
+<!--[if IE 6]>
+<script src="js/DD_belatedPNGmin.js"></script>
+<script>
+  DD_belatedPNG.fix('.logo,.pencil,.title,.depict,.kaka_price,.star_diy,.photo,.photo_a,.photo_b,.photo_c,.photo_d,.photo_e,.photo_f,.photo_g,.ico');
+</script>
+<![endif]-->
+</head>
+    <body class="home_bady">
+        <div id="home_headerbox">
+    <div id="home_header" class="h_cw">
+        <a class="logo" href="/" title="卡卡街"></a>
+        <a class="star_diy" href="/my_diy" title="开始定制"><em></em></a>
+        <span class="kaka_price"></span>
+        <div id="my_box">
+            <a class="my_menu" href="#">我的卡卡街</a>
+            <ul class="drop_box">
+                <li class="user_name"><strong>用户昵称</strong><a href="/my_logout">[退出]</a></li> 
+                <li class="user_operate">
+                    <a href="javascript:void(0)">卡卡仓库</a>
+                    <a href="javascript:void(0)">我的订单</a>
+                    <a href="javascript:void(0)">邀请有奖</a>
+                    <a href="javascript:void(0)" onclick="javascript:window.open('http://bizapp.qq.com/webc.htm?new=0&sid=800001772&o=卡卡街&q=7', '_blank', 'height=507, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');" target="_blank">咨询客服</a>
+                    <a href="javascript:void(0)" style="width:190px; overflow:hidden; _margin-right:-3px;">已有 20 件卡卡装进了信封</a>
+                </li>
+            </ul>
+        </div>  
+    </div>
+        </div>
+    <ul id="home_banner">
+        <li class="romantic">
+            <div class="cc h_cw">
+                <span class="photo"></span>
+                <span class="photo_a"></span>
+                <span class="title"></span>
+                <span class="depict"></span>
+            </div>
+        </li>
+        <li class="gray">
+            <div class="cc h_cw">
+                <span class="pencil"></span>
+                <span class="photo_a"></span>
+                <span class="photo_b"></span>
+                <span class="title"></span>
+                <span class="depict"></span>
+            </div>
+        </li>
+        <li class="palm">
+            <div class="cc h_cw">
+                <span class="photo_a"></span>
+                <span class="photo_b"></span>
+                <span class="photo_c"></span>
+                <span class="photo_d"></span>
+                <span class="photo_e"></span>
+                <span class="photo_f"></span>
+                <span class="photo_g"></span>
+                <span class="title"></span>
+                <span class="depict"></span>
+            </div>
+        </li>
+    </ul>
+    <div id="home_btn"></div>
+    <ul class="bulletin h_cw">
+        <li><em class="mini_ico"></em><span>通知：由于卡卡街定制人数过多,近期下单用户可能会出现 <strong>1-2</strong> 天延误，敬请谅解！</span><em class="mini_ico love_ico"></em><a href="javascript:addFavorite('http://www.kakajie.com', '卡卡街')">加入收藏</a></li>
+    </ul>
+    <ul class="present h_cw fixed">
+        <li class="set_a">
+            <dl>
+                <dt></dt>
+                <dd class="depict">轻松几步，快速把微博打印成纪念卡片，沉淀记忆留住美好……</dd>
+                <dd class="link"><em class="doing_ico"></em><a>晒卡卡就有机会赢好礼！</a></dd>
+            </dl>
+        </li>
+        <li class="set_b">
+            <dl>
+                <dt></dt>
+                <dd class="depict">随时阅读，随时分享。无需上网，与家人朋友分享美好&快乐！</dd>
+                <dd class="link"><em class="doing_ico orange_doing"></em><a>一次制作三套以上就有多重好礼相送！</a></dd>
+            </dl>
+        </li>
+        <li class="set_c">
+            <dl>
+                <dt></dt>
+                <dd class="depict">纯手工裁剪制作，精益求精！采用进口双面卡纸，手感精细。色调柔和解感舒适</dd>
+                <dd class="link"><em class="doing_ico palm_doing"></em><a href="/my_invite">邀请好友来卡卡街就送优惠码！</a></dd>
+            </dl>
+        </li>
+    </ul>
+    <div class="weibo_figurebtn h_cw">
+        <span><em></em></span>
+        <div class="figurebtn_box">
+
+        </div>
+    </div>
+    <div class="weibo_figurebox h_cw fixed">
+        <ul class="weibo_figure daren_list fixed">
+            <li>
+                <a class="img"><img src="img/daren01.jpg"/></a><a class="title">黯黑哭泣</a>
+            </li>
+            <li>
+                <a class="img"><img src="img/daren02.jpg"/></a><a class="title">xiaoqian谦</a>
+            </li>
+            <li>
+                <a class="img"><img src="img/daren03.jpg"/></a><a class="title">南虎F</a>
+            </li>
+            <li>
+                <a class="img"><img src="img/daren04.jpg"/></a><a class="title">YvonneAnn安墨宸</a>
+            </li>
+            <li>
+                <a class="img"><img src="img/daren05.jpg"/></a><a class="title">冬天的枫叶林</a>
+            </li>
+            <li>
+                <a class="img"><img src="img/daren06.jpg"/></a><a class="title">catlose</a>
+            </li>
+            <li>
+                <a class="img"><img src="img/daren07.jpg"/></a><a class="title">MsMs_張</a>
+            </li>
+            <li>
+                <a class="img"><img src="img/daren08.jpg"/></a><a class="title">張志蕐</a>
+            </li>
+            <li>
+                <a class="img"><img src="img/daren09.jpg"/></a><a class="title">Sandy珊20100811</a>
+            </li>
+            <li>
+                <a class="img"><img src="img/daren10.jpg"/></a><a class="title">小B_Ho</a>
+            </li>
+            <li>
+                <a class="img"><img src="img/daren11.jpg"/></a><a class="title">i-sansan</a>
+            </li>
+            <li>
+                <a class="img"><img src="img/daren12.jpg"/></a><a class="title">Sacky</a>
+            </li>
+        </ul>
+        <ul class="weibo_figure lucida_list fixed">
+            <li>
+                <a class="img"><img src="img/lucida01.jpg"/></a><a class="title">微博搞笑排行榜</a>
+            </li>
+            <li>
+                <a class="img"><img src="img/lucida02.jpg"/></a><a class="title">全球热门排行榜</a>
+            </li>
+            <li>
+                <a class="img"><img src="img/lucida03.jpg"/></a><a class="title">星座爱情001</a>
+            </li>
+            <li>
+                <a class="img"><img src="img/lucida04.jpg"/></a><a class="title">全球时尚</a>
+            </li>
+            <li>
+                <a class="img"><img src="img/lucida05.jpg"/></a><a class="title">精彩语录</a>
+            </li>
+            <li>
+                <a class="img"><img src="img/lucida06.jpg"/></a><a class="title">生活小智慧</a>
+            </li>
+            <li>
+                <a class="img"><img src="img/lucida07.jpg"/></a><a class="title">时尚经典语录</a>
+            </li>
+            <li>
+                <a class="img"><img src="img/lucida08.jpg"/></a><a class="title">治愈系心理学</a>
+            </li>
+            <li>
+                <a class="img"><img src="img/lucida09.jpg"/></a><a class="title">我们爱讲冷笑话</a>
+            </li>
+            <li>
+                <a class="img"><img src="img/lucida10.jpg"/></a><a class="title">星座秘语</a>
+            </li>
+            <li>
+                <a class="img"><img src="img/lucida11.jpg"/></a><a class="title">全球流行风尚</a>
+            </li>
+            <li>
+                <a class="img"><img src="img/lucida12.jpg"/></a><a class="title">当时我就震惊了</a>
+            </li>
+        </ul>
+        <ul class="weibo_figure grassroots_list fixed">
+            <li>
+                <a class="img"><img src="img/grassroots01.jpg"/></a><a class="title">杨幂</a>
+            </li>
+            <li>
+                <a class="img"><img src="img/grassroots02.jpg"/></a><a class="title">羅志祥</a>
+            </li>
+            <li>
+                <a class="img"><img src="img/grassroots03.jpg"/></a><a class="title">姚晨</a>
+            </li>
+            <li>
+                <a class="img"><img src="img/grassroots04.jpg"/></a><a class="title">阿信</a>
+            </li>
+            <li>
+                <a class="img"><img src="img/grassroots05.jpg"/></a><a class="title">王力宏</a>
+            </li>
+            <li>
+                <a class="img"><img src="img/grassroots06.jpg"/></a><a class="title">陈坤</a>
+            </li>
+            <li>
+                <a class="img"><img src="img/grassroots07.jpg"/></a><a class="title">小S</a>
+            </li>
+            <li>
+                <a class="img"><img src="img/grassroots08.jpg"/></a><a class="title">文章同學</a>
+            </li>
+            <li>
+                <a class="img"><img src="img/grassroots09.jpg"/></a><a class="title">韩庚</a>
+            </li>
+            <li>
+                <a class="img"><img src="img/grassroots10.jpg"/></a><a class="title">何炅</a>
+            </li>
+            <li>
+                <a class="img"><img src="img/grassroots11.jpg"/></a><a class="title">赵薇</a>
+            </li>
+            <li>
+                <a class="img"><img src="img/grassroots12.jpg"/></a><a class="title">舒淇</a>
+            </li>
+        </ul>
+    </div>
+    <div class="circuit h_cw"></div>
+    <div id="home_footer">
+        <ul class="fixed h_cw">
+            <li><a>卡卡街</a><span></span></li>
+            <li><a>订单支付</a><span></span></li>
+            <li><a>印制周期</a><span></span></li>
+            <li><a>常见问题</a><span></span></li>
+            <li><a>联系我们</a><span></span></li>
+            <li><a>版权责任</a><span></span></li>
+            <li>
+                <script type="text/javascript">
+                var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+                document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F9664771e4dc589fea4f397f60af597f5' type='text/javascript'%3E%3C/script%3E"));
+                </script>
+            </li>
+        </ul>
+        <div class="copyright h_cw">Copyright &copy; 2012 <a href="http://www.kakajie.com">kakajie.com</a>. All rights reserved.</div>
+    </div>
+    
+    <ul id="qq_online">
+        <li class="qq" onclick="javascript:window.open('http://bizapp.qq.com/webc.htm?new=0&sid=800001772&o=卡卡街&q=7', '_blank', 'height=507, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');">在线客服
+            <span title="点击这里给我发消息">800001772</span>
+        </li>
+        <li class="help" onclick="window.open('/my_article/?id=11','_blank')">使用帮助
+            <span title="教你如何一步一步玩转卡卡街">教你怎么玩</span>
+        </li>
+    </ul>
+    <script>
+        $(function(){
+            $(".figurebtn_box a").eq(0).addClass('daren').html('微博达人<em></em>');
+            $(".figurebtn_box a").eq(1).addClass('lucida').html('草根微博<em></em>');
+            $(".figurebtn_box a").eq(2).addClass('grassroots').html('名人明星<em></em>');
+        })
+    </script>
+</body>
+</html>

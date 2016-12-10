@@ -1,0 +1,78 @@
+@charset "utf-8";
+@mixin transition($value){
+	-webkit-transition:$value;
+	-moz-transition:$value;
+	-ms-transition:$value;
+	-o-transition:$value;
+	transition:$value;
+}
+@mixin animation($value){
+	-webkit-animation:$value;
+	-moz-animation:$value;
+	-ms-animation:$value;
+	-o-animation:$value;
+	animation:$value;
+}
+@mixin keyframes($name){
+	@-webkit-keyframes $name {@content;};
+	@-moz-keyframes $name {@content;};
+	@-ms-keyframes $name {@content;};
+	@-o-keyframes $name {@content;};
+	@keyframes $name {@content;};
+}
+
+.homeBanner {
+	 .imgBox {
+	 	.software {
+	 		bottom:-219px; opacity:0;
+	 		//@include animation(software_swing 1s linear 5s 1);
+	 		@include transition(all .5s linear);
+	 	}
+	 	.koala {
+	 		right:50px; opacity:0;
+	 		//@include animation(software_swing 1s linear 5s 1);
+	 		@include transition(all .5s linear 1s);
+	 	}
+	 	.zz {
+	 		opacity:0;
+	 		@include transition(all .5s linear 1s);
+	 	}
+	 }
+	 .bannerA_load {
+		.software {bottom:-50px; opacity:1;}
+		.koala {right:100px; opacity:1;}
+		//.zz {@include transition(all .5s linear 1s);}
+		.z1 {
+			@include animation(z1_swing 1.5s linear 1.8s infinite);
+		}
+		.z2 {
+			@include animation(z2_swing 1s linear 2.5s infinite);
+		}
+		.z3 {
+			@include animation(z3_swing 1s linear 2.3s infinite);
+		}
+		.z4 {
+			@include animation(z4_swing 1.2s linear 2.8s infinite);
+		}
+	 }
+}
+@include keyframes(z1_swing) {
+	0%{opacity:0; top:50px;}
+	50%{opacity:.5;}
+	100%{opacity:0; top:10px;}
+}
+@include keyframes(z2_swing) {
+	0%{opacity:0; top:76px; right:320px;}
+	50%{opacity:.3;}
+	100%{opacity:0; top:56px; right:330px;}	
+}
+@include keyframes(z3_swing) {
+	0%{opacity:0; top:77px;}
+	50%{opacity:.5;}
+	100%{opacity:0; top:60px;}
+}
+@include keyframes(z4_swing) {
+	0%{opacity:0; top:78px;}
+	50%{opacity:.5;}
+	100%{opacity:0; top:58px;}
+}

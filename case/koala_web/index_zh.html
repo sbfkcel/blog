@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="cn" xmlns:wb="http://open.weibo.com/wb">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+	<title>koala——前端预处理器语言图形编译工具</title>
+	<meta name="Keywords" content="Less,Sass,Compass,CoffeeScript,js压缩,css压缩,Less编译,Sass编译,Compass编译,CoffeeScript编译,前端预处理"/>
+	<meta name="description" content="koala是一个前端预处理器语言图形编译工具，支持Less、Sass、Compass、CoffeeScript，帮助web开发者更高效地使用它们进行开发。" />
+	<link rel="shortcut icon" href="image/favicon.ico"/>
+	<link rel="apple-touch-icon-precomposed" href="image/touch-icon-iphone.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="image/touch-icon-ipad.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="image/touch-icon-iphone-retina.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="image/touch-icon-ipad-retina.png" />
+	<link rel="stylesheet" href="style/style.css"/>
+	<!--[if IE]>
+	<script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
+	<![endif]-->
+	<!--[if !IE]><!-->
+	<link rel="stylesheet" href="style/animation.css"/>
+	<script src="js/jquery-2.0.3.min.js" type="text/javascript"></script>
+	<!--<![endif]-->
+	<script src="js/fan.min.js" type="text/javascript"></script>
+</head>
+<body>
+	<div id="header" class="header">
+		<div class="b_w">
+			<a href="/" class="logo" title="koala"></a>
+			<ul id="headerMenu" class="menu"></ul>
+			<ul id="headerLang" class="lang"></ul>
+		</div>
+	</div>
+	<div id="homeBanner" class="homeBanner">
+		<div class="bannerMain">
+			<div class="infoBox">
+				<div class="info">koala是一个前端预处理器语言图形编译工具，支持Less、Sass、Compass、CoffeeScript，帮助web开发者更高效地使用它们进行开发。</div>
+				<div id="downButtonBox"></div>
+				<ul class="otherDonate fixed">
+					<!--currentMenu-->
+					<li id="otherDownbox" class="otherList otherMenu">
+						<span class="listMenu">其他系统版本</span>
+						<ul class="otherBox">
+							<li><em class="ico16 windowIco16"></em><a target="_blank" href="javascript:void();">Windows</a></li>
+							<li><em class="ico16 appleIco16"></em><a target="_blank" href="javascript:void();">Mac OS X</a></li>
+							<li><em class="ico16 linuxIco16"></em>Linux: <a target="_blank" href="javascript:void();">32bit</a> / <a target="_blank" href="javascript:void();">64bit</a></li>
+							<li><em class="ico16 ubuntuIco16"></em>Ubuntu: <a target="_blank" href="javascript:void();">32bit</a> / <a target="_blank" href="javascript:void();">64bit</a></li>
+						</ul>
+					</li>
+					<li class="otherList"><a target="_blank" class="listMenu donate donateLink" href="javascript:void(0);"><em class="ico16 donateIco16"></em>捐赠</a></li>
+				</ul>
+				<ul class="shareButton">
+					<li class="shareBList">
+						<!--weibo-->
+						<wb:share-button appkey="m6Jx0" addition="number" type="button"></wb:share-button>
+						<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+					</li>
+					<li class="shareBList">
+						<!--github-->
+						<iframe src="http://ghbtns.com/github-btn.html?user=mdo&repo=github-buttons&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="116px" height="20px"></iframe>
+					</li>
+				</ul>
+			</div>
+			<ul class="imgBox">
+				<li id="bannerA" class="bannerA">
+					<span class="zz z1"></span>
+					<span class="zz z2"></span>
+					<span class="zz z3"></span>
+					<span class="zz z4"></span>
+					<span class="koala"></span>
+					<div class="software">
+						<div class="fileBox">
+							<em class="fileList coffee"></em>
+							<em class="fileList less"></em>
+							<em class="fileList scss"></em>
+							<em class="fileList sass"></em>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="bannerBottom"></div>
+	</div>
+	<div id="main" class="main b_w">
+		<h2 class="headline">关键特性</h2>
+		<ul class="traitBox fixed">
+			<li class="threeGridList">
+				<em class="traitIco traitIco_0"></em>
+				<h3>多语言支持</h3>
+				<div class="traitDepict">支持Less、Sass、CoffeeScript 和 Compass Framework。</div>
+			</li>
+			<li class="threeGridList">
+				<em class="traitIco traitIco_1"></em>
+				<h3>实时编译</h3>
+				<div class="traitDepict">监听文件，当文件改变时自动执行编译，这一切都在后台运行，无需人工操作。</div>
+			</li>
+			<li class="threeGridList">
+				<em class="traitIco traitIco_2"></em>
+				<h3>编译选项</h3>
+				<div class="traitDepict">可以设置各个语言的编译选项。</div>
+			</li>
+			<li class="threeGridList">
+				<em class="traitIco traitIco_3"></em>
+				<h3>代码压缩</h3>
+				<div class="traitDepict">Less & Sass支持编译后自动代码压缩.</div>
+			</li>
+			<li class="threeGridList">
+				<em class="traitIco traitIco_4"></em>
+				<h3>错误提示</h3>
+				<div class="traitDepict">在编译时如果遇到语法的错误，koala将在右下角弹出错误信息，方便开发者定位代码错误位置。</div>
+			</li>
+			<li class="threeGridList">
+				<em class="traitIco traitIco_5"></em>
+				<h3>跨平台</h3>
+				<div class="traitDepict">windows、linux、mac都能完美运行。</div>
+			</li>
+		</ul>
+		<ul class="homepart fixed">
+			<li class="threeGridList">
+				<h2 class="headline">支持</h2>
+				<div class="traitDepict">如果你在使用的过程中遇到了问题，你可以在这里创建一个问题反馈：Github issue tracker
+或者，给作者发一个邮件: <a target="_blank" href="mailto:lain.z.q@gmail.com">lain.z.q@gmail.com</a><br/>koala使用交流QQ群：229098395</div>
+			</li>
+			<li class="threeGridList">
+				<h2 class="headline">作者</h2>
+				<div class="traitDepict">Ethan Lai，web工程师<br/>Max Deng，交互设计师<br/>Leott Liu，视觉设计师</div>
+			</li>
+			<li class="threeGridList">
+				<h2 class="headline">捐助</h2>
+				<div class="traitDepict">如果你喜欢使用koala，你可以捐助我们。<br/><a target="_blank" class="donateButton donateLink" href="javascript:void(0);"><em class="ico16 donateIco16"></em>捐助</a></div>
+			</li>
+		</ul>
+	</div>
+	<div id="footer"></div>
+</body>
+</html>

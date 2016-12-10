@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="cn" xmlns:wb="http://open.weibo.com/wb">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+	<title>koala——a gui application for LESS, Sass, Compass and CoffeeScript compilation.</title>
+	<meta name="Keywords" content="Less,Sass,Compass,CoffeeScript,js compression,css compression,Less compilation,Sass compilation,Compass compilation,CoffeeScript compilation"/>
+	<meta name="description" content="Koala is a gui for Less, Sass, Compass and CoffeeScript. Koala can run in windows, mac, and linux." />
+	<link rel="shortcut icon" href="image/favicon.ico"/>
+	<link rel="apple-touch-icon-precomposed" href="image/touch-icon-iphone.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="image/touch-icon-ipad.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="image/touch-icon-iphone-retina.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="image/touch-icon-ipad-retina.png" />
+	<link rel="stylesheet" href="style/style.css"/>
+	<!--[if IE]>
+	<script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
+	<![endif]-->
+	<!--[if !IE]><!-->
+	<link rel="stylesheet" href="style/animation.css"/>
+	<script src="js/jquery-2.0.3.min.js" type="text/javascript"></script>
+	<!--<![endif]-->
+	<script src="js/fan.min.js" type="text/javascript"></script>
+</head>
+<body>
+	<div id="header" class="header">
+		<div class="b_w">
+			<a href="/" class="logo" title="koala"></a>
+			<ul id="headerMenu" class="menu"></ul>
+			<ul id="headerLang" class="lang"></ul>
+		</div>
+	</div>
+	<div id="homeBanner" class="homeBanner">
+		<div class="bannerMain">
+			<div class="infoBox">
+				<div class="info">A GUI application for Less, Sass, Compass and CoffeeScript compilation</div>
+				<div id="downButtonBox"></div>
+				<ul class="otherDonate fixed">
+					<!--currentMenu-->
+					<li id="otherDownbox" class="otherList otherMenu">
+						<span class="listMenu">Other system versions</span>
+						<ul class="otherBox">
+							<li><em class="ico16 windowIco16"></em><a target="_blank" href="javascript:void();">Windows</a></li>
+							<li><em class="ico16 appleIco16"></em><a target="_blank" href="javascript:void();">Mac OS X</a></li>
+							<li><em class="ico16 linuxIco16"></em>Linux: <a target="_blank" href="javascript:void();">32bit</a> / <a target="_blank" href="javascript:void();">64bit</a></li>
+							<li><em class="ico16 ubuntuIco16"></em>Ubuntu: <a target="_blank" href="javascript:void();">32bit</a> / <a target="_blank" href="javascript:void();">64bit</a></li>
+						</ul>
+					</li>
+					<li class="otherList"><a target="_blank" class="listMenu donate donateLink" href="javascript:void(0);"><em class="ico16 donateIco16"></em>donate</a></li>
+				</ul>
+				<ul class="shareButton">
+					<li class="shareBList">
+						<!--twitter-->
+						<a href="https://twitter.com/share" class="twitter-share-button" data-via="koala"></a>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+					</li>
+					<li class="shareBList">
+						<!--facebook-->
+						<div class="fb-follow" data-href="https://www.facebook.com/zuck" data-width="116" data-layout="button_count" data-show-faces="true"></div>
+						<script>(function(d, s, id) {
+						var js, fjs = d.getElementsByTagName(s)[0];
+						if (d.getElementById(id)) return;
+						js = d.createElement(s); js.id = id;
+						js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+						fjs.parentNode.insertBefore(js, fjs);
+						}(document, 'script', 'facebook-jssdk'));</script>
+					</li>
+					<li class="shareBList">
+						<!--github-->
+						<iframe src="http://ghbtns.com/github-btn.html?user=mdo&repo=github-buttons&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="116px" height="20px"></iframe>
+					</li>
+					<li class="shareBList">
+						<!--goolge+-->
+						<div class="g-plusone" data-size="medium"></div>
+						<script type="text/javascript">
+						(function() {
+							var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+							po.src = 'https://apis.google.com/js/plusone.js';
+							var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+						})();
+						</script>
+					</li>
+				</ul>
+			</div>
+			<ul class="imgBox">
+				<li id="bannerA" class="bannerA">
+					<span class="zz z1"></span>
+					<span class="zz z2"></span>
+					<span class="zz z3"></span>
+					<span class="zz z4"></span>
+					<span class="koala"></span>
+					<div class="software">
+						<div class="fileBox">
+							<em class="fileList coffee"></em>
+							<em class="fileList less"></em>
+							<em class="fileList scss"></em>
+							<em class="fileList sass"></em>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="bannerBottom"></div>
+	</div>
+	<div id="main" class="main b_w">
+		<h2 class="headline">Features</h2>
+		<ul class="traitBox fixed">
+			<li class="threeGridList">
+				<em class="traitIco traitIco_0"></em>
+				<h3>Multi-language Support</h3>
+				<div class="traitDepict">support for Less,Sass, CoffeeScript and Compass Framework.</div>
+			</li>
+			<li class="threeGridList">
+				<em class="traitIco traitIco_1"></em>
+				<h3>Real-time Compilation</h3>
+				<div class="traitDepict">listening files, compile automatically when the file changes, that everything is running in the background without user action.</div>
+			</li>
+			<li class="threeGridList">
+				<em class="traitIco traitIco_2"></em>
+				<h3>Compile Options</h3>
+				<div class="traitDepict">you can set the compiler options for each file.</div>
+			</li>
+			<li class="threeGridList">
+				<em class="traitIco traitIco_3"></em>
+				<h3>Project Settings</h3>
+				<div class="traitDepict">auto compress code after compilation is completed.</div>
+			</li>
+			<li class="threeGridList">
+				<em class="traitIco traitIco_4"></em>
+				<h3>Error Notification</h3>
+				<div class="traitDepict">if encountered an error during compilation, koala will pop up the error message.</div>
+			</li>
+			<li class="threeGridList">
+				<em class="traitIco traitIco_5"></em>
+				<h3>Cross-platform</h3>
+				<div class="traitDepict">koala can run in windows, linux and mac.</div>
+			</li>
+		</ul>
+		<ul class="homepart fixed">
+			<li class="threeGridList">
+				<h2 class="headline">Support</h2>
+				<div class="traitDepict">In case you encounter an issue, you can open a ticket on Github. Also feature requests can be entered here: Github issue tracker
+Or, you can send e-mail to author: <a target="_blank" href="mailto:lain.z.q@gmail.com">lain.z.q@gmail.com</a></div>
+			</li>
+			<li class="threeGridList">
+				<h2 class="headline">Author</h2>
+				<div class="traitDepict">Ethan Lai, web developer<br/>Max Deng, interaction designer<br/>Leott Liu, visual designer</div>
+			</li>
+			<li class="threeGridList">
+				<h2 class="headline">Donate</h2>
+				<div class="traitDepict">If you are like Koala, you can donate us.<br/><a target="_blank" class="donateButton donateLink" href="javascript:void(0);"><em class="ico16 donateIco16"></em>donate</a></div>
+			</li>
+		</ul>
+	</div>
+	<div id="footer"></div>
+</body>
+</html>

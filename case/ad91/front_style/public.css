@@ -1,0 +1,29 @@
+@charset "utf-8";
+/*  
+Theme Name: 友漾
+Theme URI: http://www.ad91.com
+Description:友漾
+Version:1.0 Beta
+Author&Design:单炒饭
+Author-mail:china1099@qq.com
+Author URI: http://www.ad91.com
+*/
+
+/* #################### 主控制 ##################### */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,hr,fieldset,input,textarea,select,label,p,blockquote,th,td {margin:0px auto; padding:0px; font-family:Tahoma,Helvetica,arial,宋体;}
+table {border-collapse:collapse;border-spacing:0;}
+fieldset,img {border:none;}
+address,caption,cite,code,dfn,th,var {font-style:normal;font-weight:normal;}
+ol,ul {list-style:none;}
+caption,th {text-align:left;}
+img a {border: none;}
+.cl {clear:both; height:1px; overflow:hidden; margin-top:-1px;}
+.fixed:after,.article_from li:after,.pop_from li:after,.form_list li:after {content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+.fixed,.article_from li,.pop_from li,.form_list li {zoom:1;}
+
+*html{background-image:url(about:blank);background-attachment:fixed;}
+
+/*公共样式*/
+a {text-decoration:none;}
+a:hover {text-decoration:underline;}
+h1,h2,h3,h4,h5,h6,dt {font-family:微软雅黑,Microsoft YaHei;}

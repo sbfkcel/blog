@@ -1,0 +1,169 @@
+div.datepicker {
+	position: relative;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	width: 196px;
+	height: 147px;
+	position: absolute;
+        z-index:995;
+	cursor: default;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.datepickerContainer {
+	background:white;
+	position: absolute;
+        border:1px #dad7d7 solid;
+        box-shadow:0 2px 20px #e0e0e0;
+}
+.datepickerHidden {
+	display: none;
+}
+div.datepicker table {
+	border-collapse:collapse;
+        
+        margin:2px 5px 5px 5px;
+}
+div.datepicker a {
+	color: #4a74b5;
+	text-decoration: none;
+	cursor: default;
+	outline: none;
+        border:1px #f5f5f5 solid;
+        margin:-1px -1px 0 0;
+}
+div.datepicker .datepickerMonth a,div.datepicker .datepickerGoPrev a,div.datepicker .datepickerGoNext a {border:1px white solid; margin-bottom:1px;}
+div.datepicker .datepickerMonth a:hover,div.datepicker .datepickerGoPrev a:hover,div.datepicker .datepickerGoNext a:hover {background:white; color:#136a9f;}
+ 
+
+
+div.datepickerWeek a {color:#b4b2b2;}
+div.datepicker table td {
+	text-align:center;
+	padding: 0;
+	margin: 0;
+}
+div.datepicker th {
+	text-align: center;
+	color: #8f8d8d;
+	font-weight: normal;
+}
+div.datepicker tbody th {
+	text-align:center;
+}
+div.datepicker tbody a {
+	display: block;
+}
+.datepickerDays a {
+	width: 24px;
+	line-height: 20px;
+	height: 20px;
+}
+.datepickerYears a,
+.datepickerMonths a{
+	width: 49px;
+	line-height: 46px;
+	height: 46px;
+	text-align: center;
+        margin-left:-1px;
+}
+td.datepickerSelected a{
+	color: white;
+}
+td.datepickerNotInMonth a {
+	color: #b4b2b2;
+}
+tbody.datepickerDays td.datepickerSelected{
+	background: #4a74c1;
+}
+
+tbody.datepickerDays td.datepickerNotInMonth.datepickerSelected {
+	background:white;
+}
+tbody.datepickerYears td.datepickerSelected,
+tbody.datepickerMonths td.datepickerSelected{
+	background: #17384d;
+}
+th.datepickerWeek a {
+    color:#30a92b;
+    background:#fffef7;
+    border:1px #fef9d8 solid;
+}
+div.datepicker a:hover {
+	color: white;
+        background:#7db3e8;    
+}
+
+th.datepickerWeek a:hover {
+    background:#30a92b;
+}
+
+
+div.datepicker .datepickerSaturday a:hover {color:white;}
+div.datepicker td.datepickerNotInMonth a:hover {
+	color: #b4b2b2;
+        background:#f0f0f0;
+}
+div.datepicker tbody th {
+	text-align:center;
+}
+.datepickerSpace div {
+	width: 20px;
+}
+.datepickerGoNext a,
+.datepickerGoPrev a,
+.datepickerMonth a {
+	text-align: center;
+	height: 20px;
+	line-height: 20px;
+}
+.datepickerGoNext a {
+	float: right;
+	width: 20px;
+}
+.datepickerGoPrev a {
+	float: left;
+	width: 20px;
+}
+table.datepickerViewDays tbody.datepickerMonths,
+table.datepickerViewDays tbody.datepickerYears {
+	display: none;
+}
+table.datepickerViewMonths tbody.datepickerDays,
+table.datepickerViewMonths tbody.datepickerYears,
+table.datepickerViewMonths tr.datepickerDoW {
+	display: none;
+}
+.datepickerDoW th {border:1px #f5f5f5 solid;}
+table.datepickerViewYears tbody.datepickerDays,
+table.datepickerViewYears tbody.datepickerMonths,
+table.datepickerViewYears tr.datepickerDoW {
+	display: none;
+}
+td.datepickerDisabled a,
+td.datepickerDisabled.datepickerNotInMonth a{
+	color: #b4b2b2;
+}
+td.datepickerDisabled a:hover {
+	color: #b4b2b2;
+}
+td.datepickerSpecial a {
+	background: #700;
+}
+td.datepickerSpecial.datepickerSelected a {
+	background: #4a74c1;
+}
+td.datepickerSpecial.datepickerNotInMonth a {
+    background:white;
+}
+div.datepicker .period {width:680px; height:46px; border-bottom:1px #dad7d7 solid;
+        background:#2e659b;
+	background:-moz-linear-gradient(top, #ffffff, rgba(247, 247, 247, 1)); 
+	background:-webkit-gradient(linear, 0 0, 0 bottom, from(#ffffff), to(rgba(247, 247, 247, 1)));
+	filter:alpha(opacity=100 finishopacity=100 style=1 startx=0,starty=0,finishx=0,finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#ffffff,endcolorstr=#f7f7f7,gradientType=0); /*IE6、IE7*/
+	-ms-filter:alpha(opacity=100 finishopacity=100 style=1 startx=0,starty=0,finishx=0,finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#ffffff,endcolorstr=#f7f7f7,gradientType=0);/*IE8*/
+}
+div.datepicker .period li {display:inline;}
+div.datepicker .period a {height:24px; line-height:24px; color:#474747; background:white; border:1px #dad7d7 solid; padding:0 10px; margin:10px 0 10px 10px; cursor:pointer; float:left;}
+div.datepicker .period a:hover {background:#f6f6f6;}

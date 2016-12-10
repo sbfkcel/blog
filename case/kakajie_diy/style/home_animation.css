@@ -1,0 +1,62 @@
+.gray .pencil {top:-120px; right:83px; opacity:0; -webkit-transition:all 0.5s linear; -moz-transition:all 0.5s linear; -ms-transition:all 0.5s linear; -o-transition:all 0.5s linear; transition:all 0.5s linear;}
+.gray .pencil_load {top:0; right:193px; opacity:1;}
+
+.gray .photo_a {top:269px; opacity:0; -webkit-transition:all 0.4s linear; -moz-transition:all 0.4s linear; -ms-transition:all 0.4s linear; -o-transition:all 0.4s linear; transition:all 0.4s linear;}
+.gray .photo_a_load {top:169px; opacity:1;}
+
+.gray .photo_b {top:357px; opacity:0; -webkit-transition:all 0.6s linear; -moz-transition:all 0.6s linear; -ms-transition:all 0.6s linear; -o-transition:all 0.6s linear; transition:all 0.6s linear;}
+.gray .photo_b_load {top:157px; opacity:1;}
+
+.palm .photo_a {top:-65px; opacity:0; -webkit-transition:all 0.5s linear; -moz-transition:all 0.5s linear; -ms-transition:all 0.5s linear; -o-transition:all 0.5s linear; transition:all 0.5s linear;}
+.palm .photo_a_load {top:0; opacity:1;}
+
+.palm .photo_b {top:330px; opacity:0;
+    -webkit-animation:photo_b_swing 0.8s linear infinite; -webkit-transition:all 0.8s linear; -webkit-transform-origin:33px 6px; 
+    -moz-animation:photo_b_swing 0.8s linear infinite; -moz-transition:all 0.8s linear; -moz-transform-origin:33px 6px;
+    -ms-animation:photo_b_swing 0.8s linear infinite; -ms-transition:all 0.8s linear; -ms-transform-origin:33px 6px;
+    -o-animation:photo_b_swing 0.8s linear infinite; -o-transition:all 0.8s linear; -o-transform-origin:33px 6px;
+    animation:photo_b_swing 0.8s linear infinite; transition:all 0.8s linear; transform-origin:33px 6px;
+}
+.palm .photo_b_load {top:350; opacity:1;}
+@-webkit-keyframes photo_b_swing {
+    from{-webkit-transform:rotate(20deg)}
+    50%{-webkit-transform:rotate(-20deg)}
+    to{-webkit-transform:rotate(20deg)}
+}
+@-moz-keyframes photo_b_swing {
+    from{-moz-transform:rotate(20deg)}
+    50%{-moz-transform:rotate(-20deg)}
+    to{-moz-transform:rotate(20deg)}
+}
+@-ms-keyframes photo_b_swing {
+    from{-ms-transform:rotate(20deg)}
+    50%{-ms-transform:rotate(-20deg)}
+    to{-ms-transform:rotate(20deg)}
+}
+@-o-keyframes photo_b_swing {
+    from{-o-transform:rotate(20deg)}
+    50%{-o-transform:rotate(-20deg)}
+    to{-o-transform:rotate(20deg)}
+}
+@-keyframes photo_b_swing {
+    from{transform:rotate(20deg)}
+    50%{transform:rotate(-20deg)}
+    to{transform:rotate(20deg)}
+}
+
+.palm .photo_c {top:468px; left:0px; opacity:0; -webkit-transition:all 0.5s linear; -moz-transition:all 0.5s linear; -ms-transition:all 0.5s linear; -o-transition:all 0.5s linear; transition:all 0.5s linear;}
+.palm .photo_c_load {top:478px; left:32px; opacity:1;}
+.palm .photo_d {left:80px; opacity:0; -webkit-transition:all 0.5s linear; -moz-transition:all 0.5s linear; -ms-transition:all 0.5s linear; -o-transition:all 0.5s linear; transition:all 0.5s linear;}
+.palm .photo_d_load {left:0; opacity:1;}
+.palm .photo_e {top:0px; opacity:0; -webkit-transition:all 0.5s linear; -moz-transition:all 0.5s linear; -ms-transition:all 0.5s linear; -o-transition:all 0.5s linear; transition:all 0.5s linear;}
+.palm .photo_e_load {top:110px; opacity:1;}
+.palm .photo_f {top:80px; left:350px; opacity:0; -webkit-transition:all 0.5s linear; -moz-transition:all 0.5s linear; -ms-transition:all 0.5s linear; -o-transition:all 0.5s linear; transition:all 0.5s linear;}
+.palm .photo_f_load {top:142px; left:301px; opacity:1;}
+.palm .photo_g {top:450px; opacity:0; -webkit-transition:all 0.5s linear; -moz-transition:all 0.5s linear; -ms-transition:all 0.5s linear; -o-transition:all 0.5s linear; transition:all 0.5s linear;}
+.palm .photo_g_load {top:329px; opacity:1;}
+
+.romantic .photo {bottom:-120px; opacity:0; -webkit-transition:all 0.5s linear; -moz-transition:all 0.5s linear; -ms-transition:all 0.5s linear; -o-transition:all 0.5s linear; transition:all 0.5s linear;}
+.romantic .photo_load {bottom:0; opacity:1;}
+
+.romantic .photo_a {bottom:-160px; opacity:0; -webkit-transition:all 0.3s linear; -moz-transition:all 0.3s linear; -ms-transition:all 0.3s linear; -o-transition:all 0.3s linear; transition:all 0.3s linear;}
+.romantic .photo_a_load {bottom:0; opacity:1;}

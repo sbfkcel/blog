@@ -1,0 +1,114 @@
+@charset "utf-8";
+@mixin transition($value){
+	-webkit-transition:$value;
+	-moz-transition:$value;
+	-ms-transition:$value;
+	-o-transition:$value;
+	transition:$value;
+}
+@mixin animation($value){
+	-webkit-animation:$value;
+	-moz-animation:$value;
+	-ms-animation:$value;
+	-o-animation:$value;
+	animation:$value;
+}
+@mixin keyframes($name){
+	@-webkit-keyframes $name {@content;};
+	@-moz-keyframes $name {@content;};
+	@-ms-keyframes $name {@content;};
+	@-o-keyframes $name {@content;};
+	@keyframes $name {@content;};
+}
+@mixin transform($angle){
+	-moz-transform:$angle;
+	-webkit-transform:$angle;
+	-o-transform:$angle;
+	transform:$angle;
+}
+
+.homeBanner {
+	$fileList:coffee,less,scss,sass;//文件列表样式名称
+	$fileListHeight:51px;
+	$fileListYStar:89px;
+	.imgBox {
+		.software {
+			bottom:-219px; opacity:0;
+	 		//@include animation(software_swing 1s linear 5s 1);
+			@include transition(all .5s linear);
+
+		}
+		.fileList {opacity:0;}
+		@each $i in $fileList {
+			.#{$i} {
+				@include transition(all .3s linear (index($fileList,$i) * .3 + .6s));
+				top:index($fileList,$i) * $fileListHeight - $fileListHeight + 20;
+			}
+		}
+		.koala {
+			right:50px; opacity:0;
+	 		//@include animation(software_swing 1s linear 5s 1);
+			@include transition(all .8s linear 2.1s);
+		}
+		.zz {
+			opacity:0;
+		}
+	}
+	 .bannerA_load {
+		.software {bottom:-50px; opacity:1;}
+		.fileList {opacity:1;}
+		@each $i in $fileList {
+			.#{$i} {
+				top:index($fileList,$i) * $fileListHeight - $fileListHeight;
+			}
+		}
+		.koala {right:100px; opacity:1;}
+		//.zz {@include transition(all .5s linear 1s);}
+		.z1 {
+			@include animation(z1_swing 1.5s linear 2.9s infinite);
+		}
+		.z2 {
+			@include animation(z2_swing 1s linear 3.6s infinite);
+		}
+		.z3 {
+			@include animation(z3_swing 1s linear 3.2s infinite);
+		}
+		.z4 {
+			@include animation(z4_swing 1.2s linear 3.9s infinite);
+		}
+	 }
+}
+
+@include keyframes(z1_swing) {
+	0%{opacity:0; top:50px;}
+	50%{opacity:.5;}
+	100%{opacity:0; top:10px;}
+}
+@include keyframes(z2_swing) {
+	0%{opacity:0; top:76px; right:320px;}
+	50%{opacity:.3;}
+	100%{opacity:0; top:56px; right:330px;}	
+}
+@include keyframes(z3_swing) {
+	0%{opacity:0; top:77px;}
+	50%{opacity:.5;}
+	100%{opacity:0; top:60px;}
+}
+@include keyframes(z4_swing) {
+	0%{opacity:0; top:78px;}
+	50%{opacity:.5;}
+	100%{opacity:0; top:58px;}
+}
+
+.changelogList {
+	.versionDate {
+		.newMark {@include animation(newMark_swing .2s linear 0 infinite); display:inline-block;}
+	}
+}
+@include keyframes(newMark_swing) {
+	0%{@include transform(rotate(-5deg));}
+	50%{@include transform(rotate(5deg));}
+	100%{@include transform(rotate(-5deg));}
+}
+
+a {@include transition(all .15s linear);}

@@ -1,0 +1,31 @@
+@charset "utf-8";
+/*  
+Theme Name: 卡卡街
+Theme URI: http://www.kakajie.com
+Description:卡卡街
+Version: 1.0 Beta
+Author: fan
+Author URI: http://www.kakajie.com
+*/
+
+/* #################### 主控制 ##################### */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,hr,fieldset,input,textarea,select,label,p,blockquote,th,td {margin:0px auto; padding:0px; font-family:Tahoma,Helvetica,arial,宋体;}
+table {border-collapse:collapse;border-spacing:0;}
+fieldset,img {border:none;}
+address,caption,cite,code,dfn,th,var {font-style:normal;font-weight:normal;}
+ol,ul {list-style:none;}
+caption,th {text-align:left;}
+img a {border: none;}
+.cl {clear:both; height:1px; overflow:hidden; margin-top:-1px;}
+.fixed:after {content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+.fixed {zoom:1;}
+
+*html{background-image:url(about:blank); background-attachment:fixed;}
+
+input,button,select,textarea{outline:none;} /*取消chrome得到焦点时出现的黄色边框，取消textarea的拖动改变大小textarea{resize:none}*/
+textarea{resize:none;}
+
+/*公共样式*/
+a {text-decoration:none;}
+a:hover {text-decoration:underline;}
+h1,h2,h3,h4,h5,h6,dt {font-family:微软雅黑,Microsoft YaHei;}
