@@ -305,7 +305,7 @@ var ui = {
 		var jsonval = eval('(' + sjson + ')');	//将字符串转成最终json
 
 		//ajax加载请求内容
-		f.ajax('/'+jsonval.href+'.php?'+new Date().getTime(),function(e){
+		f.ajax('/'+jsonval.href+'.html?'+new Date().getTime(),function(e){
 			var obj = f.id("main");
 			if(obj){
 				obj.innerHTML = e;
