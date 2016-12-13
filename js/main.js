@@ -66,10 +66,8 @@ var f = {
 					cur=parseInt(f.getStyle(obj,attr));
 				};
 				var speed=(json[attr]-cur)/6;
-
-				speed=speed>0 ? Math.ceil(speed) : Math.floor(speed);
-				speed=parseInt(speed);
-				if(cur!=json[attr])bStop=false;
+				speed=speed>=0 ? Math.ceil(speed) : Math.floor(speed);
+				if(cur!=parseInt(json[attr]))bStop=false;
 				if(attr=='opacity'){
 					obj.style.filter='alpha(opacity:'+(cur+speed)+')';
 					obj.style.opacity=(cur+speed)/100;
@@ -307,7 +305,7 @@ var ui = {
 		var jsonval = eval('(' + sjson + ')');	//将字符串转成最终json
 
 		//ajax加载请求内容
-		f.ajax('/'+jsonval.href+'.html?'+new Date().getTime(),function(e){
+		f.ajax('/'+jsonval.href+'.php?'+new Date().getTime(),function(e){
 			var obj = f.id("main");
 			if(obj){
 				obj.innerHTML = e;

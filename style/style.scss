@@ -58,11 +58,11 @@ $pinkColor:#ff4fa6;
 $imgSrc:url(../images/img.png);
 
 
-html,body {background:$bjColor;}
+html,body {background:$bjColor; height:100%;}
 html {overflow-y:scroll;}
 a {outline:none;}
-.homeheader {height:140px; background:$bjColor - 30; padding-top:128px; position:relative;
-	.content {width:980px; position:relative; z-index:2;}
+.homeheader {height:40%; background:$bjColor - 30; position:relative;
+	.content {width:980px; position:absolute; left:50%; margin-left:-490px; bottom:16px; z-index:2;}
 	.logo {width:53px; height:57px; display:block; margin:0 auto; @include customfont(12px); font-size:64px; color:white;}
 	.hmenu {width:740px; padding-top:61px; display:block; text-align:center; font-size:12px; overflow:hidden;
 		li {display:inline;}
