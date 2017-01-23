@@ -1,0 +1,184 @@
+@charset "utf-8";
+@import "compass";
+
+@import "compass/reset";
+
+
+//页面背景
+html,body {background:url('../images/bg.png');}
+
+
+@mixin hl($val){
+    height:$val;
+    line-height:$val;
+}
+
+//浮动清除
+.fixed {
+    @include clearfix;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('../images/iconfont.eot');
+    src: url('../images/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../images/iconfont.woff') format('woff'),
+    url('../images/iconfont.ttf') format('truetype'),
+    url('../images/iconfont.svg#iconfont') format('svg');
+}
+
+//测试内容
+.appTest {
+    $ts:&;
+    padding:60px 48px;
+
+    $pink:#ff007e;
+    $purple:#5a00ff;
+    $yellow:yellow;
+    $black:black;
+
+
+    //介绍
+    &__h1 {@include hl(40px); font-size:32px; margin-bottom:20px;}
+    &__aim {font-size:16px; margin-bottom:60px;
+        &List {@include hl(32px);}
+    }
+
+    //测试例子框架
+    &__pTitle {
+        font-size:18px; @include hl(40px); margin-bottom:30px;
+    }
+
+    //栏目
+    &__part {
+        margin-bottom:60px;
+    }
+
+    //内容
+    &__pC {
+        
+    }
+
+    $size:80px;
+    &__list {width:$size*2; float:left;}
+
+    &__depit {font-size:12px; padding-top:10px; line-height:150%;}
+
+    //测试一
+    &__p1 {
+        &Demo {
+            width:$size; height:$size; background-color:$pink; display:block;
+            &--1 {border-radius:12px;}
+            &--2 {border-radius:0 12px 12px 12px;}
+            &--3 {width:64px; height:64px; border-radius:0 12px 12px 12px; border:8px $black solid;}
+            &--4 {width:64px; height:64px; border-radius:0 12px 12px 12px; border:8px rgba($black,.2) solid; background-clip:padding-box;}
+        }
+    }
+
+    //测试二
+    &__p2 {
+        &Demo {
+            width:$size; height:$size; background-color:$pink; display:block; box-shadow:15px 15px 20px 0 rgba(0,0,0,.4);
+            &--1 {border-radius:12px;}
+            &--2 {border-radius:0 12px 12px 12px;}
+        }
+    }
+
+    //测试三
+    &__p3 {
+        &Demo {
+            width:$size; height:$size; border-radius:50%; display:block;
+            &--1 {background-image:linear-gradient(top,rgba($pink,1) 0%, rgba($purple,1) 100%);}
+            &--2 {background-image:linear-gradient(left top,rgba($pink,1) 0%, rgba($purple,1) 100%);}
+            &--3 {background-image:radial-gradient($purple,$pink);}
+            &--4 {background-image:radial-gradient($purple,$yellow,$pink);}
+            &--5 {background-image:linear-gradient(140deg,rgba($pink,1) 0%,rgba($yellow,1) 50%,rgba($purple,1) 100%);}
+            &--6 {background-image:linear-gradient(top,rgba($pink,1) 0%, rgba($purple,0) 100%);}
+            &--7 {background-image:linear-gradient(140deg,rgba($pink,1) 0%,rgba($yellow,0) 50%,rgba($purple,1) 100%);}
+            &--8 {background-image:radial-gradient(rgba($purple,1),rgba($pink,0));}
+        }
+    }
+
+    //测试四
+    &__p4 {
+        &Demo {
+            width:$size; height:$size; position:relative; display:block;
+        }
+        &Img {position:absolute; left:0; bottom:0;
+            &--1 {width:80px; height:80px;}
+            &--2 {width:60px; height:60px;}
+            &--3 {width:40px; height:40px;}
+        }
+    }
+
+    //测试五
+    &__p5 {
+        &Demo {
+            width:$size; height:$size; position:relative; display:block;
+            &--4 {}
+
+        }
+
+        &Mask {width:$size; height:$size; display:block; background-image:linear-gradient(top,rgba($pink,1) 0%, rgba($purple,1) 100%); position:absolute; left:0; top:0; display:none;}
+        &Img {width:80px; height:80px; position:absolute; left:0; bottom:0;
+            &--1 {fill:$pink;}
+            &--2 {fill:$pink; opacity:0.2;}
+            &--3 {fill:$pink; stroke:$black; stroke-width:12;}
+            //&--4 {fill:$purple; filter:drop-shadow(15px 15px 7px rgba(0,0,0,0.4)); }
+            &--4 {fill:url(#lineGradient);}
+            &--5 {fill:url(#lineGradient); filter:drop-shadow(15px 15px 7px rgba(0,0,0,0.4));}
+        }
+
+        //定义渐变
+        &From {stop-color:$purple;}
+        &To {stop-color:$pink;}
+    }
+
+    //测试六
+    &__p6 {
+        &Demo {
+            width:$size; @include hl($size); font-family:"iconfont"; position:relative; display:block;
+            &--1 {font-size:80px;}
+            &--2 {font-size:60px;}
+            &--3 {font-size:40px;}
+        }
+    }
+
+    //测试七
+    &__p7 {
+        &Demo {
+            width:$size; @include hl($size); font-family:"iconfont"; font-size:80px; position:relative; display:block;
+            &--1 {color:$pink;}
+            &--2 {color:$pink; text-stroke:1px $black; -webkit-text-stroke:1px $black;}
+            &--3 {background-image:linear-gradient(top,rgba($pink,1) 0%, rgba($purple,1) 100%); -webkit-text-fill-color:transparent; -webkit-background-clip:text;}
+            &--4 {text-shadow:15px 15px 20px rgba(0,0,0,.4); color:$purple;
+                &[data-text]::after {
+                    content: attr(data-text);  
+                    color: $pink;  
+                    position: absolute;  
+                    left: 0;  
+                    z-index: 2;
+                    -webkit-mask-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#000), to(rgba(0, 0, 255, 0)));
+                }
+            };
+        }
+    }
+
+    //测试八
+    &__p8 {
+        &Demo {
+            width:$size; height:$size; -webkit-mask-image:url('../images/mask.png'); overflow:hidden; position:relative; display:block;
+            &--1 {color:$pink; font-size:12px; line-height:16px;}
+            &--2 {
+                img {width:$size; height:$size;}
+            }
+            &--3 {
+                video {margin-left:-20px;}
+            }
+
+        }
+    }
+
+
+}
+

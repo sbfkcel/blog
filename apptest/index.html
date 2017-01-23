@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>app用例测试</title>
+    <meta name="author" content="id:---,wd:gz1997,fe:gz1997" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="appTest">
+        <h1 class="appTest__h1">测试目的</h1>
+        <ol class="appTest__aim">
+            <li class="appTest__aimList">1. 为尽量减少设计师与开发人员之间的工作交接成本</li>
+            <li class="appTest__aimList">2. 对于设计师的工作起到一定的指引作用</li>
+            <li class="appTest__aimList">3. 尝试新的工作方法，尽可能最大限度重用资源</li>
+            <li class="appTest__aimList">4. 规范项目静态资源管理</li>            
+        </ol>
+        <dl class="appTest__part">
+            <dt class="appTest__pTitle">一、圆角及描边测试</dt>
+            <dd class="appTest__pC fixed">
+                <ul class="appTest__p1">
+                    <li class="appTest__list">
+                        <i class="appTest__p1Demo appTest__p1Demo--1"></i>
+                        <div class="appTest__depit">
+                            size 80 <br> color #ff007e<br> radius 12
+                        </div>
+                    </li>
+                    <li class="appTest__list">
+                        <i class="appTest__p1Demo appTest__p1Demo--2"></i>
+                        <div class="appTest__depit">
+                            size 80 <br> color #ff007e<br> radius 0 12 12 12
+                        </div>
+                    </li>
+                    <li class="appTest__list">
+                        <i class="appTest__p1Demo appTest__p1Demo--3"></i>
+                        <div class="appTest__depit">
+                            size 64 <br> color #ff007e<br> radius 0 12 12 12<br> border 8px black
+                        </div>
+                    </li>
+                    <li class="appTest__list">
+                        <i class="appTest__p1Demo appTest__p1Demo--4"></i>
+                        <div class="appTest__depit">
+                            size 64 <br> color #ff007e<br> radius 0 12 12 12<br> border 8px rgba(black,.2)
+                        </div>
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+        <dl class="appTest__part">
+            <dt class="appTest__pTitle">二、图形阴影测试</dt>
+            <dd class="appTest__pC fixed">
+                <ul class="appTest__p2">
+                    <li class="appTest__list">
+                        <i class="appTest__p2Demo appTest__p2Demo--1"></i>
+                        <div class="appTest__depit">
+                            size 80 <br> color #ff007e<br> radius 12<br> shadow 15 15 20 0 rgba(black,.4)
+                        </div>
+                    </li>
+                    <li class="appTest__list">
+                        <i class="appTest__p2Demo appTest__p2Demo--2"></i>
+                        <div class="appTest__depit">
+                            size 80 <br> color #ff007e<br> radius 0 12 12 12<br> shadow 15 15 20 0 rgba(black,.4)
+                        </div>
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+        <dl class="appTest__part">
+            <dt class="appTest__pTitle">三、渐变支持</dt>
+            <dd class="appTest__pC fixed">
+                <ul class="appTest__p3">
+                    <li class="appTest__list">
+                        <i class="appTest__p3Demo appTest__p3Demo--1"></i>
+                        <div class="appTest__depit">
+                            size 80 <br> linear-gradient
+                            <br>
+                            top<br>
+                            rgba(255,0,126) 0%,<br>
+                            rgba(90,0,255) 100%<br>
+                            radius 50%
+                        </div>
+                    </li>
+                    <li class="appTest__list">
+                        <i class="appTest__p3Demo appTest__p3Demo--2"></i>
+                        <div class="appTest__depit">
+                            size 80 <br>
+                            linear-gradient<br>
+                            left top<br>
+                            rgba(255,0,126) 0%<br>
+                            rgba(90,0,255) 100%<br>
+                            radius 50%
+                        </div>
+                    </li>
+                    <li class="appTest__list">
+                        <i class="appTest__p3Demo appTest__p3Demo--3"></i>
+                        <div class="appTest__depit">
+                            size 80 <br>
+                            radial-gradient<br>
+                            rgba(90,0,255,1),<br>
+                            rgba(255,0,126,0) <br>
+                            radius 50%
+                        </div>
+                    </li>
+                    <li class="appTest__list">
+                        <i class="appTest__p3Demo appTest__p3Demo--4"></i>
+                        <div class="appTest__depit">
+                            size 80 <br> radial-gradient<br>
+                            rgba(90,0,255),<br>
+                            rgba(255,255,0),<br>
+                            rgba(255,0,126) <br>
+                            radius 50%
+                        </div>
+                    </li>
+                    <li class="appTest__list">
+                        <i class="appTest__p3Demo appTest__p3Demo--5"></i>
+                        <div class="appTest__depit">
+                            size 80 <br>
+                            linear-gradient<br>
+                            140deg<br>
+                            rgba(255,0,126),<br>
+                            rgba(255,255,0),<br>
+                            rgba(90,0,255)<br>
+                            radius 50%
+                        </div>
+                    </li>
+                    <li class="appTest__list">
+                        <i class="appTest__p3Demo appTest__p3Demo--6"></i>
+                        <div class="appTest__depit">
+                            size 80 <br>
+                            linear-gradient<br>
+                            top<br>
+                            rgba(255,0,126,1) 0%,<br>
+                            rgba(90,0,255,0) 100%<br>
+                            radius 50%
+                        </div>
+                    </li>
+                    <li class="appTest__list">
+                        <i class="appTest__p3Demo appTest__p3Demo--7"></i>
+                        <div class="appTest__depit">
+                            size 80 <br>
+                            radial-gradient<br>
+                            rgba(90,0,255),<br>
+                            rgba(255,255,0,0),<br>
+                            rgba(255,0,126) <br>
+                            radius 50%
+                        </div>
+                    </li>
+                    <li class="appTest__list">
+                        <i class="appTest__p3Demo appTest__p3Demo--8"></i>
+                        <div class="appTest__depit">
+                            size 80 <br>
+                            radial-gradient<br>
+                            rgba(90,0,255,1),<br>
+                            rgba(255,0,126,0) <br>
+                            radius 50%
+                        </div>
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+        <dl class="appTest__part">
+            <dt class="appTest__pTitle">四、svg矢量图片的支持，请在测试用例中插入附件“img.svg”，并设置图片大小。（技术关键字“SVG Sprite Symbol”）</dt>
+            <dd class="appTest__pC fixed">
+                <ul class="appTest__p4">
+                    <li class="appTest__list">
+                        <i class="appTest__p4Demo"><svg class="appTest__p4Img appTest__p4Img--1"><use xlink:href="./images/img.svg#clock"></use></svg></i>
+                        <div class="appTest__depit">
+                            size 80
+                        </div>
+                    </li>
+                    <li class="appTest__list">
+                        <i class="appTest__p4Demo"><svg class="appTest__p4Img appTest__p4Img--2"><use xlink:href="./images/img.svg#clock"/></svg></i>
+                        <div class="appTest__depit">
+                            size 60
+                        </div>
+                    </li>
+                    <li class="appTest__list">
+                        <i class="appTest__p4Demo"><svg class="appTest__p4Img appTest__p4Img--3"><use xlink:href="./images/img.svg#clock"/></svg></i>
+                        <div class="appTest__depit">
+                            size 40
+                        </div>
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+        <dl class="appTest__part">
+            <dt class="appTest__pTitle">五、svg顏色及阴影支持。（技术关键字同上）</dt>
+            <dd class="appTest__pC fixed">
+                <ul class="appTest__p5">
+                    <li class="appTest__list">
+                        <i class="appTest__p5Demo"><svg class="appTest__p5Img appTest__p5Img--1"><use xlink:href="./images/img.svg#clock"></use></svg></i>
+                        <div class="appTest__depit">
+                            size 80<br>
+                            color #ff007e
+                        </div>
+                    </li>
+                    <li class="appTest__list">
+                        <i class="appTest__p5Demo"><svg class="appTest__p5Img appTest__p5Img--2"><use xlink:href="./images/img.svg#clock"></use></svg></i>
+                        <div class="appTest__depit">
+                            size 80<br>
+                            color #ff007e<br>
+                            opacity 0.2
+                        </div>
+                    </li>
+                    <li class="appTest__list">
+                        <i class="appTest__p5Demo"><svg class="appTest__p5Img appTest__p5Img--3"><use xlink:href="./images/img.svg#clock"></use></svg></i>
+                        <div class="appTest__depit">
+                            size 80<br>
+                            color #ff007e<br>
+                            border 1 black solid
+                        </div>
+                    </li>
+                    <li class="appTest__list">
+                        <i class="appTest__p5Demo appTest__p5Demo--4">
+                            <svg width="0" height="0">
+                                <defs>
+                                    <linearGradient x1="0.5" y1="0" x2="0.5" y2="1" id="lineGradient">
+                                        <stop class="appTest__p5From" offset="0%"/>
+                                        <stop class="appTest__p5To" offset="100%"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <svg class="appTest__p5Img appTest__p5Img--4" id="cc">
+                                <use xlink:href="./images/img.svg#clock"></use>
+                            </svg>
+                            <i class="appTest__p5Mask"></i>
+                        </i>
+                        <div class="appTest__depit">
+                            size 80<br>
+                            linear-gradient<br>
+                            top<br>
+                            rgba(255,0,126,1) 0%,<br>
+                            rgba(90,0,255,0) 100%
+                        </div>
+                    </li>
+                    <li class="appTest__list">
+                        <i class="appTest__p5Demo"><svg class="appTest__p5Img appTest__p5Img--5"><use xlink:href="./images/img.svg#clock"></use></svg></i>
+                        <div class="appTest__depit">
+                            size 80<br>
+                            linear-gradient<br>
+                            top<br>
+                            rgba(255,0,126,1) 0%,<br>
+                            rgba(90,0,255,0) 100%<br>
+                            shadow 15 15 20 rgba(0,0,0,.4)
+                        </div>
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+        <dl class="appTest__part">
+            <dt class="appTest__pTitle">六、iconFont支持测试，请引入附件中的”iconfont.ttf”文件并插入字符“\e606”(unicode编码)，并设置字体大小。（技术关键字“iconFont”）</dt>
+            <dd class="appTest__pC fixed">
+                <ul class="appTest__p6">
+                    <li class="appTest__list">
+                        <i class="appTest__p6Demo appTest__p6Demo--1">&#xe606;</i>
+                        <div class="appTest__depit">
+                            size 80
+                        </div>
+                    </li>
+                    <li class="appTest__list">
+                        <i class="appTest__p6Demo appTest__p6Demo--2">&#xe606;</i>
+                        <div class="appTest__depit">
+                            size 60
+                        </div>
+                    </li>
+                    <li class="appTest__list">
+                        <i class="appTest__p6Demo appTest__p6Demo--3">&#xe606;</i>
+                        <div class="appTest__depit">
+                            size 40
+                        </div>
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+        <dl class="appTest__part">
+            <dt class="appTest__pTitle">七、iconFont颜色及阴影支持。（技术关键字同上）</dt>
+            <dd class="appTest__pC fixed">
+                <ul class="appTest__p7">
+                    <li class="appTest__list">
+                        <i class="appTest__p7Demo appTest__p7Demo--1">&#xe606;</i>
+                        <div class="appTest__depit">
+                            size 80<br>
+                            color #ff007e
+                        </div>
+                    </li>
+                    <li class="appTest__list">
+                        <i class="appTest__p7Demo appTest__p7Demo--2">&#xe606;</i>
+                        <div class="appTest__depit">
+                            size 80<br>
+                            color #ff007e<br>
+                            border 1 black solid
+                        </div>
+                    </li>
+                    <li class="appTest__list">
+                        <i class="appTest__p7Demo appTest__p7Demo--3">&#xe606;</i>
+                        <div class="appTest__depit">
+                            size 80<br>
+                            linear-gradient<br>
+                            top<br>
+                            rgba(255,0,126) 0%,<br>
+                            rgba(90,0,255) 100%<br>
+
+                        </div>
+                    </li>
+                    <li class="appTest__list">
+                        <i class="appTest__p7Demo appTest__p7Demo--4" data-text="&#xe606;">&#xe606;</i>
+                        <div class="appTest__depit">
+                            size 80<br>
+                            linear-gradient<br>
+                            top<br>
+                            rgba(255,0,126) 0%,<br>
+                            rgba(90,0,255) 100%<br>
+                            shadow 15 15 20 rgba(0,0,0,.4)
+                        </div>
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+        <dl class="appTest__part">
+            <dt class="appTest__pTitle">八、内容遮罩测试</dt>
+            <dd class="appTest__pC fixed">
+                <ul class="appTest__p8">
+                    <li class="appTest__list">
+                        <i class="appTest__p8Demo appTest__p8Demo--1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis atque aperiam error. Sed accusantium hic, reprehenderit commodi unde, maiores quidem nulla aliquam, possimus, iure beatae id doloribus omnis minima reiciendis earum adipisci!</i>
+                        <div class="appTest__depit">
+                            文本遮罩
+                        </div>
+                    </li>
+                    <li class="appTest__list">
+                        <i class="appTest__p8Demo appTest__p8Demo--2"><img src="./images/img.png" alt="美女"></i>
+                        <div class="appTest__depit">
+                            图片遮罩
+                        </div>
+                    </li>
+                    <li class="appTest__list">
+                        <i class="appTest__p8Demo appTest__p8Demo--3">
+                            <video height="80" autoplay="autoplay" preload="auto" loop="loop">
+                                <source src="./video/mov.mp4" type="video/mp4" />
+                            </video>
+                        </i>
+                        <div class="appTest__depit">
+                           视频遮罩
+                        </div>
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+    </div>
+</body>
+</html>
