@@ -120,6 +120,7 @@ a {outline:none;}
 
 .footer {width:100%; margin-bottom:50px; font-size:12px; text-align:center; color:$fontColor - 50; position:absolute; bottom:0; 
 	span {padding:8px 20px; background:$bjColor - 15; border-radius:20px; display:inline-block;}
+	a {color:$fontColor - 50;}
 	
 }
 .footerNone {display:none;}
