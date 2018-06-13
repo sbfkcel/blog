@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>获取设备UA</title>
+    <style>
+        pre {white-space:pre-wrap;}
+    </style>
+</head>
+<body>
+    <pre>
+
+    </pre>
+    <script>
+        var obj = {
+            'appCodeName':undefined,
+            'appName':undefined,
+            'appVersion':undefined,
+            'connection':{name:123},
+            'language':undefined,
+            'platform':undefined,
+            'product':undefined,
+            'productSub':undefined,
+            'userAgent':undefined,
+            'vendor':undefined
+        };
+
+        for(var i in obj){
+            var item = navigator[i];
+            if(i === 'connection'){
+                for(var _i in item){
+                    if(typeof item[_i] !== 'function'){
+                        obj[i][_i] = item[_i];
+                    };
+                    
+                };
+            }else{
+                obj[i] = item;
+            };
+        };
+        document.getElementsByTagName('pre')[0].innerHTML = JSON.stringify(obj,null,2);
+    </script>
+    
+</body>
+</html>
