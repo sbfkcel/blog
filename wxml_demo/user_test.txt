@@ -1,11 +1,6 @@
----
-title: MySql_02 MySql的安装
-date: 2017-08-13 10:05:37
-categories: MySql
-description: MySql的安装及新特性
----
+# MySql的安装及新特性
 
-### MySql 的下载与安装
+## MySql 的下载与安装
 MySQL 的官网下载地址: [https://dev.mysql.com/downloads/mysql/](https://dev.mysql.com/downloads/mysql/)   
   
 我们选择适合自己的版本进行下载
@@ -19,7 +14,7 @@ MySQL 的官网下载地址: [https://dev.mysql.com/downloads/mysql/](https://de
 ![](http://oupjofqw3.bkt.clouddn.com/mysql_0003.png)
 然后一直下一步即可,，当然我们也有另一种方法安装，通过命令安装，详细介绍请看 [github地址](https://github.com/mysqljs/mysql)
 
-### 检测是否安装成功并登录
+## 检测是否安装成功并登录
 在终端输入以下命令：
 
 ```XML
