@@ -17,7 +17,7 @@ MySQL 的官网下载地址: [https://dev.mysql.com/downloads/mysql/](https://de
 
 安装比较简单，但是特别特别注意一点，安装过程中为了安全会提示给你一个临时密码，以便接下来登录使用，如下图：
 ![](http://oupjofqw3.bkt.clouddn.com/mysql_0003.png)
-然后一直下一步即可，当然我们也有另一种方法安装，通过命令安装，详细介绍请看 [github地址](https://github.com/mysqljs/mysql)
+然后一直下一步即可,，当然我们也有另一种方法安装，通过命令安装，详细介绍请看 [github地址](https://github.com/mysqljs/mysql)
 
 ### 检测是否安装成功并登录
 在终端输入以下命令：
