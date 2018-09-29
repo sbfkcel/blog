@@ -1,1 +1,22 @@
-<pre>#!/usr/bin/python ↵# -*- coding: UTF-8 -*- ↵↵import thread ↵import time ↵↵# 为线程定义一个函数 ↵def print_time( threadName, delay):↵    count = 0↵    while count &lt; 5:↵        time.sleep(delay)↵        count += 1↵        print &quot;%s: %s&quot; % ( threadName, time.ctime(time.time()) ) ↵↵# 创建两个线程 ↵try:↵    thread.start_new_thread( print_time, (&quot;Thread-1&quot;, 2, ) )↵    thread.start_new_thread( print_time, (&quot;Thread-2&quot;, 4, ) ) ↵except:↵    print &quot;Error: unable to start thread&quot; ↵↵while 1:↵    pass</pre>
+<pre>#!/usr/bin/python 
+# -*- coding: UTF-8 -*- 
+
+import thread ↵import time 
+
+# 为线程定义一个函数 
+def print_time( threadName, delay):
+count = 0
+while count &lt; 5:
+time.sleep(delay)
+count += 1
+print &quot;%s: %s&quot; % ( threadName, time.ctime(time.time()) ) 
+
+# 创建两个线程 
+try:
+thread.start_new_thread( print_time, (&quot;Thread-1&quot;, 2, ) )
+thread.start_new_thread( print_time, (&quot;Thread-2&quot;, 4, ) ) 
+except:
+print &quot;Error: unable to start thread&quot; 
+
+while 1:
+pass</pre>
