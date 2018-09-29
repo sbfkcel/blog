@@ -1,7 +1,10 @@
-<pre>#!/usr/bin/python 
+<pre>
+#
+#!/usr/bin/python 
 # -*- coding: UTF-8 -*- 
 
-import thread ↵import time 
+import thread 
+import time 
 
 # 为线程定义一个函数 
 def print_time( threadName, delay):
@@ -19,4 +22,5 @@ except:
 print &quot;Error: unable to start thread&quot; 
 
 while 1:
-pass</pre>
+pass
+</pre>
