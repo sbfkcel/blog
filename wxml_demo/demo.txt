@@ -167,11 +167,11 @@ $ git status
 
 ## Table
 
-| Item      |    Value | Qty  |
-| :-------- | --------:| :--: |
-| Computer  | 1600 USD |  5   |
-| Phone     |   12 USD |  12  |
-| Pipe      |    1 USD | 234  |
+| Item      		|    Value | Qty  |
+| :---------------------| --------:| :--: |
+| Computer  		| 1600 USD |  5   |
+| Phone     		|   12 USD |  12  |
+| Pipe\sqrt[n]{a}:wink: |    1 USD | 234  |
 
 
 ### Typographic replacements
