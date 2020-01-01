@@ -8,6 +8,31 @@
 
 **Towxml** 正是为了解决这一切，Towxml是一个可将`HTML`、`markdown`转换为`WXML`(WeiXin Markup Language)的渲染库。
 
+
+## Echarts
+
+```echarts
+{
+    width:100%,
+    height:500,
+    option:{
+        xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+        },
+        yAxis: {
+        type: 'value'
+        },
+        series: [{
+        data: [820, 932, 901, 934, 1290, 1330, 1320],
+        type: 'line',
+        areaStyle: {}
+        }]
+    }
+}
+```
+
 ## Class diagram
 
 ```yuml
