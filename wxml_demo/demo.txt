@@ -108,7 +108,7 @@
 [Policy Server]-[note: To be clustered to meet throughput needs{bg:cornsilk}]
 [Policy Server]-[Directory Server]
 [Policy Server]-[Underwriting & Rating Server]
-``
+```
 
 ## Sequence diagram
 
