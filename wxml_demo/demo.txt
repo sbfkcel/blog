@@ -14,7 +14,7 @@
 ```echarts
 {
   "width": 100,
-  "height": 320,
+  "height": 260,
   "option": {
     "xAxis": {
       "type": "category",
@@ -55,7 +55,7 @@
 
 ```echarts
 {
-  "height": 320,
+  "height": 260,
   "option": {
     "tooltip": {
       "trigger": "axis",
