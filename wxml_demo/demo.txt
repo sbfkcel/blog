@@ -57,6 +57,9 @@
 {
   "height": 260,
   "option": {
+    "grid:" {
+      "top":"4%"
+    },
     "tooltip": {
       "trigger": "axis",
       "axisPointer": {
