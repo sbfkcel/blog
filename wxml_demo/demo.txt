@@ -8,6 +8,241 @@
 
 **Towxml** 正是为了解决这一切，Towxml是一个可将`HTML`、`markdown`转换为`WXML`(WeiXin Markup Language)的渲染库。
 
+
+## Echarts
+
+```echarts
+{
+  "width": 100,
+  "height": 260,
+  "option": {
+    "xAxis": {
+      "type": "category",
+      "boundaryGap": false,
+      "data": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ]
+    },
+    "yAxis": {
+      "type": "value"
+    },
+    "series": [
+      {
+        "data": [
+          820,
+          932,
+          901,
+          934,
+          1290,
+          1330,
+          1320
+        ],
+        "type": "line",
+        "areaStyle": {}
+      }
+    ]
+  }
+}
+```
+
+## Echarts
+
+```echarts
+{
+  "height": 260,
+  "option": {
+    "tooltip": {
+      "trigger": "axis",
+      "axisPointer": {
+        "type": "cross",
+        "label": {
+          "backgroundColor": "#6a7985"
+        }
+      }
+    },
+    "legend": {
+      "data": [
+        "邮件营销",
+        "联盟广告"
+      ]
+    },
+    "xAxis": [
+      {
+        "type": "category",
+        "boundaryGap": false,
+        "data": [
+          "周一",
+          "周二",
+          "周三",
+          "周四",
+          "周五",
+          "周六",
+          "周日"
+        ]
+      }
+    ],
+    "yAxis": [
+      {
+        "type": "value"
+      }
+    ],
+    "series": [
+      {
+        "name": "邮件营销",
+        "type": "line",
+        "stack": "总量",
+        "areaStyle": {},
+        "data": [
+          120,
+          132,
+          101,
+          134,
+          90,
+          230,
+          210
+        ]
+      },
+      {
+        "name": "联盟广告",
+        "type": "line",
+        "stack": "总量",
+        "areaStyle": {},
+        "data": [
+          220,
+          182,
+          191,
+          234,
+          290,
+          330,
+          310
+        ]
+      }
+    ]
+  }
+}
+```
+
+## Class diagram
+
+```yuml
+// {type:class}
+// {direction:topDown}
+// {generate:true}
+
+[note: You can stick notes on diagrams too!{bg:cornsilk}]
+[Customer]<>1-orders 0..*>[Order]
+[Order]++*-*>[LineItem]
+[Order]-1>[DeliveryMethod]
+[Order]*-*>[Product|EAN_Code|promo_price()]
+[Category]<->[Product]
+[DeliveryMethod]^[National]
+[DeliveryMethod]^[International]
+```
+
+## Use-case diagram
+
+```yuml
+// {type:usecase}
+// {direction:leftToRight}
+// {generate:true}
+
+(note: figure 1.2{bg:beige})
+[User]-(Login)
+[Site Maintainer]-(Add User)
+(Add User)<(Add Company)
+[Site Maintainer]-(Upload Docs)
+(Upload Docs)<(Manage Folders)
+[User]-(Upload Docs)
+[User]-(Full Text Search Docs)
+(Full Text Search Docs)>(Preview Doc)
+(Full Text Search Docs)>(Download Docs)
+[User]-(Browse Docs)
+(Browse Docs)>(Preview Doc)
+(Download Docs)
+[Site Maintainer]-(Post New Event to the Web Site)
+[User]-(View Events)
+```
+
+## Activity diagram
+
+```yuml
+// {type:activity}
+// {generate:true}
+
+(start)-><a>[kettle empty]->(Fill Kettle)->|b|
+<a>[kettle full]->|b|->(Boil Kettle)->|c|
+|b|->(Add Tea Bag)->(Add Milk)->|c|->(Pour Water)
+(Pour Water)->(end)
+```
+
+## State diagram
+
+```yuml
+// {type:state}
+// {generate:true}
+
+(start)[Start]->(Simulator running)
+(Simulator running)[Pause]->(Simulator paused|do / wait)
+(Simulator running)[Stop]->(end)
+(Log retrieval)[Continue]->(Simulator running)
+(Simulator paused)[Unpause]->(Simulator running)
+(Simulator paused)[Data requested]->(Log retrieval|do / output log)
+(Log retrieval)->(end)
+```
+
+## Deployment diagram
+
+```yuml
+// {type:deployment}
+// {generate:true}
+
+[Presentation Server]-[Policy Server]
+[Policy Server]-[Document Server]
+[Product Server]-[Document Server]
+[Document Server]ASP.Net-[Workstation]
+[Policy Server]-[Database Server]
+[Product Server]-[Database Server]
+[Policy Server]-[note: To be clustered to meet throughput needs{bg:cornsilk}]
+[Policy Server]-[Directory Server]
+[Policy Server]-[Underwriting & Rating Server]
+```
+
+## Package diagram
+
+```yuml
+// {type:deployment}
+// {generate:true}
+
+[Presentation Server]-[Policy Server]
+[Policy Server]-[Document Server]
+[Product Server]-[Document Server]
+[Document Server]ASP.Net-[Workstation]
+[Policy Server]-[Database Server]
+[Product Server]-[Database Server]
+[Policy Server]-[note: To be clustered to meet throughput needs{bg:cornsilk}]
+[Policy Server]-[Directory Server]
+[Policy Server]-[Underwriting & Rating Server]
+```
+
+## Sequence diagram
+
+```yuml
+// {type:sequence}
+// {generate:true}
+
+[:Computer]sendUnsentEmail>[:Server]
+[:Computer]newEmail>[:Server]
+[:Server]reponse.>[:Computer]
+[:Computer]downloadEmail>[:Server]
+[:Computer]deleteOldEmail>[:Server]
+```
+
 ## 公式
 
 这是行间公式$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$ 这是之后的测试文字。补充文字，测试换行。由于微信小程序==不允许直接渲染==`HTML`，因此富文本编辑器生成的`HTML`内容无法直接在小程序中展示。
