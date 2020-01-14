@@ -217,16 +217,17 @@
 ```yuml
 // {type:package}
 // {generate:true}
-
-[Presentation Server]-[Policy Server]
-[Policy Server]-[Document Server]
-[Product Server]-[Document Server]
-[Document Server]ASP.Net-[Workstation]
-[Policy Server]-[Database Server]
-[Product Server]-[Database Server]
-[Policy Server]-[note: To be clustered to meet throughput needs{bg:cornsilk}]
-[Policy Server]-[Directory Server]
-[Policy Server]-[Underwriting & Rating Server]
+[Elegibility & Benefits]->[Elegibility Search]
+[Remittances] -> [Remittance Search]
+[Notifications] -> [Notification Search]
+[Check Claim Status] -> [Claim Search]
+[Submit a Claim Online] -> [Patient Search]
+[Physician/Provider Directory]
+[Remittance Search] -> [Search]
+[Notification Search] -> [Search]
+[Claim Search] -> [Search]
+[Patient Search] -> [Search]
+[Eligibility Search] -> [Search]
 ```
 
 ## Sequence diagram
