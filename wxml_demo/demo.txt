@@ -215,7 +215,7 @@
 ## Package diagram
 
 ```yuml
-// {type:deployment}
+// {type:package}
 // {generate:true}
 
 [Presentation Server]-[Policy Server]
