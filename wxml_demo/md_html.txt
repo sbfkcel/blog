@@ -88,7 +88,7 @@ Markdown表格
    F_{\text {浮}}^{\prime}=\rho_{\text {水}} V_{\text {排}}^{\prime} g=1.0 \times 10^{3} \mathrm{~kg} / \mathrm{m}^{3} \times 1 \times 10^{-4} \mathrm{~m}^{3} \times 10 \mathrm{~N} / \mathrm{kg}=1 \mathrm{~N}
    $$
 
-3. $\quad$      $\Delta$    $\underline{\quad\quad\quad\quad}$   $\rho$   $\eta$   
+3. $quad$      $Delta$    $underline{quadquadquadquad}$   $rho$   $eta$   
 
 4. $$
    \begin{align}
@@ -100,7 +100,7 @@ Markdown表格
 
    
 
-5. 0.32N，0.4$\times$10^3^kg/m^3^    
+5. 0.32N，0.4$times$10^3^kg/m^3^    
 
    1~0~
    1~1~
