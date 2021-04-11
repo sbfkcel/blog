@@ -6,7 +6,9 @@ Html表格
 
 
 
-1. <table width="100%" border="2">
+1. 
+
+<table width="100%" border="2">
       <tbody>
           <tr>
               <td>背景</td>
