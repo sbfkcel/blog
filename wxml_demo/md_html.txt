@@ -85,7 +85,7 @@ Markdown表格
 1. $$F_{text {浮 }}=G_{text {排 }}=m_{text {排 }} g=rho_{text {液 }} g V_{\text {排 }}$$、$0.8×10^3kg/m^3$
 
 2. $$
-   F_{\text {浮}}^{\prime}=\rho_{\text {水}} V_{\text {排}}^{\prime} g=1.0 \times 10^{3} \mathrm{~kg} / \mathrm{m}^{3} \times 1 \times 10^{-4} \mathrm{~m}^{3} \times 10 \mathrm{~N} / \mathrm{kg}=1 \mathrm{~N}
+   F_{text {浮}}^{prime}=rho_{text {水}} V_{text {排}}^{prime} g=1.0 times 10^{3} mathrm{~kg} / mathrm{m}^{3} times 1 times 10^{-4} mathrm{~m}^{3} times 10 mathrm{~N} / mathrm{kg}=1 mathrm{~N}
    $$
 
 3. $quad$      $Delta$    $underline{quadquadquadquad}$   $rho$   $eta$   
