@@ -1,30 +1,6 @@
-## 写在前面
+## Markdown TodoList
 
-```javascript
-let a = 123;
-
-
-let b = 456;
-
-
-
-console.log(a);
-```
-
-
-## Code
-
-Python
-
-``` python
-@requires_authorization
-def somefunc(param1='', param2=0):
-    '''A docstring'''
-    if param1 > param2: # interesting
-        print 'Greater'
-    return (param2 - param1 + 1) or None
-class SomeClass:
-    pass
->>> message = '''interpreter
-... prompt'''
-```
+- [ ] 一起去旅行
+- [ ] 跟同学聚会
+- [x] 晚上十点足球比赛
+- [x] 测试用例撰写
