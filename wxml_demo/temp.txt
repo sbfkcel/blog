@@ -1,106 +1,12 @@
 ## 写在前面
 
-这篇文章题目叫“【用 Kotlin 写 Android】用 Kotlin 写 Android Hello World”，主要介绍一用 Kotlin 写出来的 Hello World 究竟与用 Java 写有什么区别，并会介绍一些概念和 Kotlin 的具体实现。
+```javascript
+let a = 123;
 
-#### 技术点分析
 
-一个控件定义后，在代码中不需要通过 findViewById 来讲程序对象和 xml 中布局绑定起来，而是可以直接使用使用 xml 中控件 id 直接操纵控件，这个时候会提示引入 `import kotlinx.android.synthetic.main.activity_main.*` 的依赖，这样可以说相当方便，去除了那些没什么大意义的模板代码，减少代码量，使结构更清晰。相信你已经看过很多地方介绍 Kotlin 都会说这是它很大的一个优点，但我想说的还包括：如果你在 `setContentView(R.layout.activity_main)` 中加载了一个布局文件，但是你在下面使用布局文件中 id 直接去操纵控件时，id 写错了，写成了一个在 `activity_main` 中根本不存在的一个 ID，会不会有问题？答案是会挂掉，可以理解，操作了不属于自己界面的元素，会报 Crash：`Attempt to invoke virtual method * on a null object reference`；那如果两个界面 id 一致，但是在 `import` 时写错包了，会有问题吗？经试验，是没有问题的，这是不是很奇怪？其实这是因为 Android 中，在 R 文件中将资源文件都映射成一个 `int` 整数，存储在不同 R 文件的静态内部类里面，因此两个 id 其实在 R 文件中用一个值表示了。同理，如果其他的一些资源文件被同样映射，即使写错了，也可能正常运行。PS：不过一般没有理由把这个写错。
+let b = 456;
 
-我们通过 id 可以找到对应的 View，为什么在 Java 中就不可以呢？这个 include 就是怎么完成这个的呢？答案是这个 include 不仅仅是简单的 include，而是因为在 build.gradle 加入了扩展 plugin: `kotlin-android-extensions`，而这个扩展 plugin 其实是会编译生成一些额外代码的，那我们就把编译出来字节码文件进行反编译，看看反编译出来了点什么：
 
-![反编译 Kotlin 生成的字节码](https://user-images.githubusercontent.com/7275046/39064906-b0baf6ee-4502-11e8-977a-ac44b8a27d78.png)
 
-再对比一下源文件：
-
-![源文件](https://user-images.githubusercontent.com/7275046/39064960-d8b94286-4502-11e8-9d8c-1e15fc69b307.png)
-
-我们可以看到：setContentView(2131296283)，将 2131296283 转换成十六进制是 0x7f09001b，在 R 文件中：
-
+console.log(a);
 ```
-public static final class layout {
-  public static final int activity_main=0x7f09001b;
-}
-```
-
-同时也不存在直接用 id 直接操作 View，而是也通过 findViewById() 来获取 View，并且这里还有一个 HashMap 进行优化，并且 id.my_app_text 也是 R 文件中的，因此在源文件中 import 错文件也不会报错：
-
-```
-public View _$_findCachedViewById(int var1) {
-   if (this._$_findViewCache == null) {
-      this._$_findViewCache = new HashMap();
-   }
-
-   View var2 = (View)this._$_findViewCache.get(var1);
-   if (var2 == null) {
-      var2 = this.findViewById(var1);
-      this._$_findViewCache.put(var1, var2);
-   }
-
-   return var2;
-}
-```
-
-我们还看到 `println(testNull?.length)` 最后被反编译出来是：`System.out.println(var3);`，在 Kotlin 标准库中 println 的定义是：
-
-```
-/** Prints the given message and newline to the standard output stream. */
-@kotlin.internal.InlineOnly
-public inline fun println(message: Any?) {
-    System.out.println(message)
-}
-```
-
-因此也就是一些边准库的简单写法，在编译后恢复成了正常 Java 代码的写法。我们接着看反编译出来的下半部分：
-
-![反编译下班半分截图](https://user-images.githubusercontent.com/7275046/39065577-d187811a-4504-11e8-97f4-377e9eeeaa05.png)
-
-这里有静态类 MainActivity.Companion，对应的是 Kotlin 中的伴随对象，伴随对象内的变量是所有类共用的属性，类似于 static 的含义，在反编译后的代码看，也确实是用 static final 对象实现的：`public static final MainActivity.Companion Companion = new MainActivity.Companion((DefaultConstructorMarker)null);`
-
-我们还注意到：`val TAG: String? = MainActivity::class.simpleName` 最后被反编译后的代码是：`private static final String TAG = Reflection.getOrCreateKotlinClass(MainActivity.class).getSimpleName();`，Reflection 是反射的意思，由 Kotlin 类映射到 Java 对象。在写前一段代码后会报警告说需要引入 `org.jetbrains.kotlin:kotlin-reflect:1.2.31`，这里我们知道其实了其实它最后用到了 Kotlin 类 Reflection 和方法，不引入包就会报 `kotlin.jvm.KotlinReflectionNotSupportedError: Kotlin reflection implementation is not found at runtime. Make sure you have kotlin-reflect.jar in the classpath` 的错误也就可以理解了。
-
-最后我们看一下：
-
-```
-var testNull: String? = null
-println(testNull?.length)
-
-var testNull: String? = "213"
-println(testNull?.length)
-
-var testNull: String? = null
-if ((System.currentTimeMillis() % 2) == 0L) {
-    testNull = "123"
-} else {
-    testNull = null
-}
-println(testNull?.length)
-```
-
-最后被编译成：
-
-```
-String testNull = (String)null;
-Object var3 = null;
-System.out.println(var3);
-
-String testNull = "213";
-Integer var3 = testNull.length();
-System.out.println(var3);
-
-String testNull = (String)null;
-if (System.currentTimeMillis() % (long)2 == 0L) {
-   testNull = "123";
-} else {
-   testNull = (String)null;
-}
-Integer var3 = testNull != null ? testNull.length() : null;
-System.out.println(var3);
-```
-
-有一定的优化，如果在编译时就能确定值，直接简化，否则就是正常转换，其中 `?.` 最后其实就是转换成了 `if != null` 的判断。
-
-还有一个知识点是 Lambdas 表达式其实依旧是还原成最基本的 Java 代码，也包含 `new OnClickListener`。
-
-## 总结一下
-
-到这里，我们展示了一个最简单的 Hello World 程序，可以看出因为 Kotlin 也是运行在 JVM 上的，因此也需要符合字节码规范，因此反编译后生成的代码就会和直接用 Java 写有很多相似的部分，只不过直接写 Kotlin 的时候，Kotlin 插件或者是库帮我们完成了一些工作，我们接下来一些东西还会类似去分析。
