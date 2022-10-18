@@ -1,0 +1,29 @@
+<span style="color:#fff;background-color:#009688;padding:1px 6px;margin-right:6px;border-radius:4px">答案</span> $1.$<br><span style="color:#fff;background-color:#009688;padding:1px 6px;margin-right:6px;border-radius:4px">解析</span><br>$
+\color{#009688}{ 【思路分析】}$<br>$
+\color{#009688}{ 这是一道求"\infty -\infty "型未定式的极限问题,对于}$<br>$
+\color{#009688}{ 这种问题,通常采用某种变形使之化为"\frac{0}{0}"型或}$<br>$
+\color{#009688}{ "\frac{\infty}{\infty}"型未定式,再对分式进行化简后使用洛必达}$<br>$
+\color{#009688}{ 法则求解.}$<br>$
+\color{#FF5405}{ \mathbf{第一步：将整式化为分式}}$<br>$
+\underset{x\rightarrow -\infty}{\lim}\left[ \sqrt{x^2+2x+\sin x}+\left( x+2 \right) \right] \,\,$<br>$
+\color{#009688}{ //分子有理化.分子分母同时乘以}$<br>$
+\color{#009688}{ \sqrt{x^2+2x+\sin x}-\left( x+2 \right) .}$<br>$
+=\underset{x\rightarrow -\infty}{\lim}\frac{\left[ \sqrt{x^2+2x+\sin x}+\left( x+2 \right) \right]}{\sqrt{x^2+2x+\sin x}-\left( x+2 \right)}\cdot$<br>$
+\left[ \sqrt{x^2+2x+\sin x}-\left( x+2 \right) \right]$<br>$
+=\underset{x\rightarrow -\infty}{\lim}\frac{x^2+2x+\sin x-\left( x+2 \right) ^2}{\sqrt{x^2+2x+\sin x}-\left( x+2 \right)}$<br>$
+=\underset{x\rightarrow -\infty}{\lim}\frac{x^2+2x+\sin x-\left( x^2+4x+4 \right)}{\sqrt{x^2+2x+\sin x}-\left( x+2 \right)}$<br>$
+\color{#FF5405}{ \mathbf{第二步：化简后使用洛必达法则}}$<br>$
+=\underset{x\rightarrow -\infty}{\lim}\frac{-2x+\sin x-4}{\sqrt{x^2+2x+\sin x}-\left( x+2 \right)}\,\,$<br>$
+\color{#009688}{ //因为x\rightarrow -\infty ,分子、分母同除以"最大项"x,}$<br>$
+\color{#009688}{ 保证分子分母没有\infty 项的存在.}$<br>$
+=\underset{x\rightarrow -\infty}{\lim}\frac{-2+\frac{\sin x}{x}-\frac{4}{x}}{\frac{\sqrt{x^2+2x+\sin x}}{x}-\left( 1+\frac{2}{x} \right)}\,$<br>$
+\,\color{#009688}{ //x\rightarrow -\infty ,\frac{\sqrt{x^2+2x+\sin x}}{x}}$<br>$
+\color{#009688}{ =-\sqrt{\frac{x^2+2x+\sin x}{x^2}}.}$<br>$
+=\underset{x\rightarrow -\infty}{\lim}\frac{-2+\frac{\sin x}{x}-\frac{4}{x}}{-\sqrt{\frac{x^2+2x+\sin x}{x^2}}-\left( 1+\frac{2}{x} \right)}\,$<br>$
+=\underset{x\rightarrow -\infty}{\lim}\frac{-2+\frac{\sin x}{x}-\frac{4}{x}}{-\sqrt{1+\frac{2}{x}+\frac{\sin x}{x^2}}-\left( 1+\frac{2}{x} \right)}\,$<br>$
+\,\color{#009688}{ //\underset{x\rightarrow -\infty}{\lim}\frac{\sin}{x}=\underset{x\rightarrow -\infty}{\lim}\left( \sin x\cdot \frac{1}{x} \right) }$<br>$
+\color{#009688}{ =有界函数\cdot 无穷小=0.}$<br>$
+=\underset{x\rightarrow -\infty}{\lim}\frac{-2+0-0}{-\sqrt{1+0+0}-\left( 1+0 \right)}\,\,$<br>$
+=1.$<br>$
+\color{#FF5405}{ \mathbf{【欧几里得——符潇然老师】}}
+$
