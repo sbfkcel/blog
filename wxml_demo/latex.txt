@@ -1,3 +1,29 @@
+## 新加的测试
+$
+设空间区域\varOmega 由曲面z=a^2-x^2-y^2与平面$<br>$
+z=0所围成，其中a为正常数，记\varOmega 表面的外$<br>$
+侧为\varSigma ,\varOmega 的体积为V，则$<br>$
+\underset{\Sigma}{\int\kern{-8pt}\int\kern{-23mu}\bigcirc}{x^2yz^2\mathrm{d}y\mathrm{d}z-xy^2z^2\mathrm{d}z\mathrm{d}x+z\left( 1+xyz \right) \mathrm{d}x\mathrm{d}y}$<br>$
+=\left( \,\, \quad\right)$<br>$
+\left( \mathrm{A} \right) 0.\qquad \left( \mathrm{B} \right) \frac{V}{2}.\qquad \left( \mathrm{C} \right) V.\qquad \left( \mathrm{D} \right) 2V.
+$
+
+## 公式
+
+行内数学公式$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$ 演示。公式单引号演示${X}''$。LaTeX是一种基于TeX的文档排版系统,把大片排版的格式细节隐藏在若干样式之后，以内容的逻辑结构统帅纷繁的格式，遂成为现在最流行的科技写作——尤其是数学写作的工具之一。
+
+$$
+       \frac{1}{(\sqrt{\phi \sqrt{5}}-\phi) e^{\frac25 \pi}} =
+         1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}}
+          {1+\frac{e^{-8\pi}} {1+\ldots} } } }
+$$
+
+$$
+
+    \left( \sum_{k=1}^n a_k b_k \right)^{\!\!2} \leq
+     \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+$$
+
 <span style="color:#fff;background-color:#009688;padding:1px 6px;margin-right:6px;border-radius:4px">答案</span> $1.$<br><span style="color:#fff;background-color:#009688;padding:1px 6px;margin-right:6px;border-radius:4px">解析</span><br>$
 \color{#009688}{ 【思路分析】}$<br>$
 \color{#009688}{ 这是一道求"\infty -\infty "型未定式的极限问题,对于}$<br>$
@@ -12,7 +38,10 @@
 \left[ \sqrt{x^2+2x+\sin x}-\left( x+2 \right) \right]$<br>$
 =\underset{x\rightarrow -\infty}{\lim}\frac{x^2+2x+\sin x-\left( x+2 \right) ^2}{\sqrt{x^2+2x+\sin x}-\left( x+2 \right)}$<br>$
 =\underset{x\rightarrow -\infty}{\lim}\frac{x^2+2x+\sin x-\left( x^2+4x+4 \right)}{\sqrt{x^2+2x+\sin x}-\left( x+2 \right)}$<br>$
+\color{#FF5405}{ \mathbf{第二步：化简后使用洛必达法则}}$<br>$
 =\underset{x\rightarrow -\infty}{\lim}\frac{-2x+\sin x-4}{\sqrt{x^2+2x+\sin x}-\left( x+2 \right)}\,\,$<br>$
+\color{#009688}{ //因为x\rightarrow -\infty ,分子、分母同除以"最大项"x,}$<br>$
+\color{#009688}{ 保证分子分母没有\infty 项的存在.}$<br>$
 =\underset{x\rightarrow -\infty}{\lim}\frac{-2+\frac{\sin x}{x}-\frac{4}{x}}{\frac{\sqrt{x^2+2x+\sin x}}{x}-\left( 1+\frac{2}{x} \right)}\,$<br>$
 \,\color{#009688}{ //x\rightarrow -\infty ,\frac{\sqrt{x^2+2x+\sin x}}{x}}$<br>$
 \color{#009688}{ =-\sqrt{\frac{x^2+2x+\sin x}{x^2}}.}$<br>$
@@ -24,3 +53,7 @@
 =1.$<br>$
 \color{#FF5405}{ \mathbf{【欧几里得——符潇然老师】}}
 $
+
+## 最后的测试
+
+-
