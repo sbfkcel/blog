@@ -11,7 +11,7 @@
 =\underset{x\rightarrow -\infty}{\lim}\frac{\left[ \sqrt{x^2+2x+\sin x}+\left( x+2 \right) \right]}{\sqrt{x^2+2x+\sin x}-\left( x+2 \right)}\cdot$<br>$
 \left[ \sqrt{x^2+2x+\sin x}-\left( x+2 \right) \right]$<br>$
 =\underset{x\rightarrow -\infty}{\lim}\frac{x^2+2x+\sin x-\left( x+2 \right) ^2}{\sqrt{x^2+2x+\sin x}-\left( x+2 \right)}$<br>$
-=\underset{x\rightarrow -\infty}{\lim}\frac{x^2+2x+\sin x-\left( x^2+4x+4 \right)}{\sqrt{x^2+2x+\sin x}-\left( x+2 \right)}$<br>
+=\underset{x\rightarrow -\infty}{\lim}\frac{x^2+2x+\sin x-\left( x^2+4x+4 \right)}{\sqrt{x^2+2x+\sin x}-\left( x+2 \right)}$<br>$
 =\underset{x\rightarrow -\infty}{\lim}\frac{-2x+\sin x-4}{\sqrt{x^2+2x+\sin x}-\left( x+2 \right)}\,\,$<br>$
 =\underset{x\rightarrow -\infty}{\lim}\frac{-2+\frac{\sin x}{x}-\frac{4}{x}}{\frac{\sqrt{x^2+2x+\sin x}}{x}-\left( 1+\frac{2}{x} \right)}\,$<br>$
 \,\color{#009688}{ //x\rightarrow -\infty ,\frac{\sqrt{x^2+2x+\sin x}}{x}}$<br>$
