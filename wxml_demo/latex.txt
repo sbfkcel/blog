@@ -1,3 +1,13 @@
+## 新加的测试
+$
+设空间区域\varOmega 由曲面z=a^2-x^2-y^2与平面$<br>$
+z=0所围成，其中a为正常数，记\varOmega 表面的外$<br>$
+侧为\varSigma ,\varOmega 的体积为V，则$<br>$
+\underset{\Sigma}{\int\kern{-8pt}\int\kern{-23mu}\bigcirc}{x^2yz^2\mathrm{d}y\mathrm{d}z-xy^2z^2\mathrm{d}z\mathrm{d}x+z\left( 1+xyz \right) \mathrm{d}x\mathrm{d}y}$<br>$
+=\left( \,\, \quad\right)$<br>$
+\left( \mathrm{A} \right) 0.\qquad \left( \mathrm{B} \right) \frac{V}{2}.\qquad \left( \mathrm{C} \right) V.\qquad \left( \mathrm{D} \right) 2V.
+$
+
 ## 公式
 
 行内数学公式$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$ 演示。公式单引号演示${X}''$。LaTeX是一种基于TeX的文档排版系统,把大片排版的格式细节隐藏在若干样式之后，以内容的逻辑结构统帅纷繁的格式，遂成为现在最流行的科技写作——尤其是数学写作的工具之一。
