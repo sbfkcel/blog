@@ -11,11 +11,8 @@
 =\underset{x\rightarrow -\infty}{\lim}\frac{\left[ \sqrt{x^2+2x+\sin x}+\left( x+2 \right) \right]}{\sqrt{x^2+2x+\sin x}-\left( x+2 \right)}\cdot$<br>$
 \left[ \sqrt{x^2+2x+\sin x}-\left( x+2 \right) \right]$<br>$
 =\underset{x\rightarrow -\infty}{\lim}\frac{x^2+2x+\sin x-\left( x+2 \right) ^2}{\sqrt{x^2+2x+\sin x}-\left( x+2 \right)}$<br>$
-=\underset{x\rightarrow -\infty}{\lim}\frac{x^2+2x+\sin x-\left( x^2+4x+4 \right)}{\sqrt{x^2+2x+\sin x}-\left( x+2 \right)}$<br>$
-\color{#FF5405}{ \mathbf{第二步：化简后使用洛必达法则}}$<br>$
+=\underset{x\rightarrow -\infty}{\lim}\frac{x^2+2x+\sin x-\left( x^2+4x+4 \right)}{\sqrt{x^2+2x+\sin x}-\left( x+2 \right)}$<br>
 =\underset{x\rightarrow -\infty}{\lim}\frac{-2x+\sin x-4}{\sqrt{x^2+2x+\sin x}-\left( x+2 \right)}\,\,$<br>$
-\color{#009688}{ //因为x\rightarrow -\infty ,分子、分母同除以"最大项"x,}$<br>$
-\color{#009688}{ 保证分子分母没有\infty 项的存在.}$<br>$
 =\underset{x\rightarrow -\infty}{\lim}\frac{-2+\frac{\sin x}{x}-\frac{4}{x}}{\frac{\sqrt{x^2+2x+\sin x}}{x}-\left( 1+\frac{2}{x} \right)}\,$<br>$
 \,\color{#009688}{ //x\rightarrow -\infty ,\frac{\sqrt{x^2+2x+\sin x}}{x}}$<br>$
 \color{#009688}{ =-\sqrt{\frac{x^2+2x+\sin x}{x^2}}.}$<br>$
