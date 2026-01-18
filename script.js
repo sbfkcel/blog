@@ -147,7 +147,7 @@ function initThree() {
 
 function initLanguage() {
     const toggleBtn = document.querySelector('#lang-toggle');
-    if (!toggleBtn) return;
+    const toggleBtnMobile = document.querySelector('#lang-toggle-mobile');
     
     const safeSetStorage = (key, value) => {
         try {
@@ -180,11 +180,14 @@ function initLanguage() {
         document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
     };
 
-    toggleBtn.addEventListener('click', function() {
+    const handleToggle = () => {
         const currentLang = safeGetStorage('v2add_lang') || getDefaultLang();
         const nextLang = currentLang === 'zh' ? 'en' : 'zh';
         updateLang(nextLang);
-    });
+    };
+
+    if (toggleBtn) toggleBtn.addEventListener('click', handleToggle);
+    if (toggleBtnMobile) toggleBtnMobile.addEventListener('click', handleToggle);
     
     function getDefaultLang() {
         const saved = safeGetStorage('v2add_lang');
@@ -242,6 +245,20 @@ function initRevealAnimations() {
 function initActiveNav() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-links a');
+    const menuToggle = document.querySelector('#menu-toggle');
+    const navContainer = document.querySelector('.nav-links');
+
+    if (menuToggle && navContainer) {
+        menuToggle.addEventListener('click', () => {
+            navContainer.classList.toggle('mobile-active');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navContainer.classList.remove('mobile-active');
+            });
+        });
+    }
 
     window.addEventListener('scroll', () => {
         let current = '';

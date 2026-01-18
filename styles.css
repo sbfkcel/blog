@@ -448,19 +448,134 @@ body {
     font-size: 0.8rem;
 }
 
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    padding: 0.5rem;
+    margin-left: 1rem;
+}
+
+.desktop-only {
+    display: block;
+}
+
+.mobile-lang-switcher {
+    display: none;
+    margin-top: 2rem;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.lang-toggle-btn.secondary {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    font-size: 1rem;
+}
+
 @media (max-width: 768px) {
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-lang-switcher {
+        display: block;
+    }
+    
     :root {
-        --space-m: 1.5rem;
-        --space-l: 4rem;
-        --space-xl: 6rem;
+        --space-m: 1.25rem;
+        --space-l: 3rem;
+        --space-xl: 5rem;
     }
     
+    .nav-content {
+        height: 70px;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        height: calc(100vh - 70px);
+        background: rgba(3, 3, 3, 0.98);
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 2rem;
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0.95);
+        transition: all 0.4s var(--ease-out);
+        z-index: 999;
+        margin: 0;
+    }
+
+    .nav-links.mobile-active {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+
+    .nav-links a {
+        font-size: 1.5rem;
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a::after {
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .nav-links a.active::after {
+        width: 40px;
+    }
+
     .hero-title {
-        font-size: 2.75rem;
+        font-size: clamp(2.25rem, 8vw, 3.5rem);
+        margin-bottom: 1rem;
     }
-    
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        margin: 0 auto 2.5rem auto;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .product-card {
+        padding: 2.5rem 2rem;
+    }
+
+    .advantages-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
     .contact-info {
         flex-direction: column;
-        gap: 2rem;
+        gap: 2.5rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
     }
 }
