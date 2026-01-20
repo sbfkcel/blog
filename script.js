@@ -129,9 +129,16 @@ function initThree() {
         mouseY = (0.5 - e.clientY / window.innerHeight);
     });
 
+    let offset = 0.01;
     const animate = () => {
         requestAnimationFrame(animate);
-        uniforms.uTime.value += 0.01;
+        if(uniforms.uTime.value < 10){
+            offset = 0.01;
+        };
+        if(uniforms.uTime.value > 200){
+            offset = -0.01;
+        };
+        uniforms.uTime.value += offset;
         uniforms.uMouse.value.x += (mouseX - uniforms.uMouse.value.x) * 0.05;
         uniforms.uMouse.value.y += (mouseY - uniforms.uMouse.value.y) * 0.05;
         renderer.render(scene, camera);
